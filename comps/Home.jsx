@@ -20,9 +20,10 @@ const Home = ({ products, bannerData }) => {
 
       {/* === SHOW PRODUCTS  */}
       <section name='products'
-      className=" grid grid-cols-3"
+      className=" grid  grid-cols-3 sm:grid-cols-3 md:grid-cols-4"
       >
 
+      {/* === MAP PRODUCTS  */}
        {products?.map((products)=>{
          return (
           <Products 
