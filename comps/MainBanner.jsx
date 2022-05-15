@@ -26,8 +26,8 @@ const MainBanner = ({banner}) => {
 
       {/* === MAIN IMAGE  */}
       <img 
-      className=' drop-shadow-2xl absolute w-48  sm:w-56 self-end md:self-center'
-      src={urlFor(banner.image)} alt="cats" 
+      className=' drop-shadow-2xl absolute w-48  sm:w-60 self-end md:self-center'
+      src={urlFor(banner.image)} alt="hoverboard" 
       />
       
       <Link href={`products/${banner.product}`}>

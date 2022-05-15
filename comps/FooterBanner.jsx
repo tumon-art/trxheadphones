@@ -1,7 +1,7 @@
 const FooterBanner = () => {
   return (
    <>
-    
+    Footer Banner
    </>
   )
 }

@@ -7,7 +7,7 @@ const Navbar = () => {
 
       <h3>
         <Link href='/' >
-          <a className=' flex items-end font-mono font-semibold '> Cat House 
+          <a className=' flex items-end font-mono font-semibold '> HoverOver
             <svg className=' h-6 ml-1 w-auto'
               viewBox="0 0 24 26" stroke-width="1.5" stroke="currentColor" fill="none" >
               <path d="M3 17c3.333 -3.333 5 -6 5 -8c0 -3 -1 -3 -2 -3s-2.032 1.085 

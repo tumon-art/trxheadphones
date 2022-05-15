@@ -9,7 +9,7 @@ const Products = ({ products: { image, name, slug, price } }) => {
 
         {/* === IMAGE */}
         <Link href={`product/${slug.current}`}>
-          <img src={urlFor(image && image[0])}
+          <img src={urlFor(image && image[0])} alt='hoverboard'
             className='object-cover hover:scale-90 transition duration-300 '
           />
         </Link>

@@ -10,11 +10,11 @@ const ProductDetails = ({ product, products }) => {
     return (
         <>
             <div>
-                <div>
+                <div className=' flex '>
 
                     {/* === IMAGE  */}
-                    <div>
-                        <img src={urlFor(image && image[0])} />
+                    <div  >
+                        <img className=' h-96 w-auto bg-red-400' src={urlFor(image && image[0])} />
                     </div>
 
                     {/* === PRODUCT DETAILS & REVIEWS */}
