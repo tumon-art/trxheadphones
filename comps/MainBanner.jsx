@@ -5,7 +5,7 @@ import { urlFor } from '../lib/client'
 const MainBanner = ({banner}) => {
   
   return (
-   <main className=' md:mx-20 md:rounded-xl md:h-64 md:my-8
+   <main className=' md:mx-20 md:rounded-xl md:h-64 md:mb-8
    relative h-60 px-4 py-8 bg-gray-300 md:px-10
     '>
 
@@ -24,8 +24,9 @@ const MainBanner = ({banner}) => {
       NOW!
       </h1>
 
+      {/* === MAIN IMAGE  */}
       <img 
-      className=' drop-shadow-2xl absolute w-60  sm:w-56 self-end md:self-center'
+      className=' drop-shadow-2xl absolute w-48  sm:w-56 self-end md:self-center'
       src={urlFor(banner.image)} alt="cats" 
       />
       
@@ -36,10 +37,10 @@ const MainBanner = ({banner}) => {
       </Link>
 
       <div className=' self-end'>
-        <h4 className='hidden md:block text-cyan-900 text-md font-extrabold'>
+        <h4 className='hidden lg:block text-cyan-900 text-md font-extrabold'>
           Description
         </h4>
-        <h4 className=' hidden md:block text-zinc-500'>
+        <h4 className=' hidden lg:block text-zinc-500'>
         {banner.desc} 
         </h4>
       </div>
