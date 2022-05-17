@@ -1,4 +1,4 @@
-
+import { AiFillBell, AiFillStar, AiOutlineStar } from 'react-icons/ai'
 import { client, urlFor } from "../../lib/client"
 
 
@@ -8,23 +8,33 @@ const ProductDetails = ({ product, products }) => {
     const { image, name, details, price } = product;
 
     return (
-        <>
+        <div className=' px-10 py-10'>
             <div>
                 <div className=' flex '>
 
                     {/* === IMAGE  */}
-                    <div  >
-                        <img className=' h-96 w-auto bg-red-400' src={urlFor(image && image[0])} />
+                    <div >
+                        <img className=' h-96 w-auto bg-zinc-300 rounded-2xl' 
+                        src={urlFor(image && image[0])} 
+                        />
                     </div>
 
                     {/* === PRODUCT DETAILS & REVIEWS */}
-                    <div>
-                        <h1> {name} </h1>
-                    </div>
+                    <section className=' text-red-600 ml-10'>
+                        <h1 className=' text-sky-900 text-xl font-semibold'> {product.model} </h1>
+                        <div className='flex my-2'>
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiOutlineStar />
+                        <span className=' text-zinc-500 text-sm mx-1'> (9) </span>
+                        </div>
+                    </section>
 
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
