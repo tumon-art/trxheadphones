@@ -5,9 +5,9 @@ const Navbar = () => {
   return (
     <div className="   border-zinc-500 px-1 my-1 md:mx-24 flex justify-between">
 
-      <h3>
+      <h3 className=' self-end'>
         <Link href='/' >
-          <a className=' flex items-end font-mono font-semibold '> HoverOver
+          <a className=' flex items-end font-mono font-semibold '> TRX Headphones
             <svg className=' h-6 ml-1 w-auto'
               viewBox="0 0 24 26" stroke-width="1.5" stroke="currentColor" fill="none" >
               <path d="M3 17c3.333 -3.333 5 -6 5 -8c0 -3 -1 -3 -2 -3s-2.032 1.085 

@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <div className=" mt-20 flex flex-col items-center">
 
-      <b> 2022 HoverOver All rights reserverd </b>
+      <b> 2022 TRX Headphones All rights reserverd </b>
 
       <nav className=" flex mt-2 mb-2">
 

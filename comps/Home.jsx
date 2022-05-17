@@ -8,19 +8,19 @@ const Home = ({ products, bannerData }) => {
       {/* === MAIN BANNER  */}
       <MainBanner banner={bannerData.length && bannerData[0]} />
 
-      <section className="  my-2 flex items-center flex-col">
-        <h1 className=" text-4xl text-cyan-900 font-sans font-extrabold">
-        Best Selling Cats
+      <section className="  my-4 flex items-center flex-col">
+        <h1 className=" sm:text-4xl text-2xl text-cyan-900 font-sans font-extrabold">
+        Best Selling Headphones
         </h1>
 
         <p className=" text-base text-cyan-900">
-        Best obeying cats
+        Best in the Market
         </p>
       </section>
 
       {/* === SHOW PRODUCTS  */}
       <section name='products'
-      className=" grid mt-8  grid-cols-3 sm:grid-cols-3 md:grid-cols-4"
+      className=" grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4"
       >
 
       {/* === MAP PRODUCTS  */}

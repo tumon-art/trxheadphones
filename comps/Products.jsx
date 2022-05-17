@@ -3,9 +3,9 @@ import { urlFor } from "../lib/client"
 
 const Products = ({ products: { image, name, slug, price } }) => {
   return (
-    <div className="grid justify-center ">
+    <div className="grid justify-center my-5 ">
+      <div className=" rounded-md overflow-hidden bg-gray-300 h-80 w-80 sm:h-40 sm:w-40 lg:h-56 lg:w-56">
 
-      <div className=" rounded-md overflow-hidden bg-gray-300 h-28 w-28">
 
         {/* === IMAGE */}
         <Link href={`product/${slug.current}`}>
@@ -17,7 +17,7 @@ const Products = ({ products: { image, name, slug, price } }) => {
       </div>
 
       {/* === NAME & PRICE */}
-      <nav className="mx-1">
+      <nav className="mx-2">
         <p> {name} </p>
         <b> ${price} </b>
       </nav>

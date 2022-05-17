@@ -7,7 +7,7 @@ const Layout = ({children}) => {
         <div>
 
             <Head>
-                <title> HoverOver </title>
+                <title> TRX Headphones </title>
                 <meta name="description" content=" This is Cat's World!" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
