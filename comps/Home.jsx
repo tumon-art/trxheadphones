@@ -20,7 +20,9 @@ const Home = ({ products, bannerData }) => {
 
       {/* === SHOW PRODUCTS  */}
       <section name='products'
-      className=" grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4"
+      className=" grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4
+       lg:mx-20
+      "
       >
 
       {/* === MAP PRODUCTS  */}
