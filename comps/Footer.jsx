@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
-    <div className=" mt-20 flex flex-col items-center">
+    <div className=" mt-20 mx-4 text-center flex flex-col items-center">
 
-      <b> 2022 TRX Headphones All rights reserverd </b>
+      <p className=" font-bold text-sm"> 2022 TRX Headphones All rights reserverd </p>
 
       <nav className=" flex mt-2 mb-2">
 

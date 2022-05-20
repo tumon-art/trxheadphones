@@ -34,7 +34,7 @@ const MainBanner = ({ banner }) => {
         />
 
         <Link href={`products/${banner.product}`}>
-          <button className='absolute  bottom-10 text-center shadow-lg font-extrabold shadow-red-400
+          <button className=' mt-4 text-center shadow-lg font-extrabold shadow-red-400
            w-32 bg-red-700 text-white px-4 rounded-lg py-1'>
             {banner.buttonText}
           </button>
