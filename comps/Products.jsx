@@ -1,9 +1,10 @@
 import Link from "next/link"
 import { urlFor } from "../lib/client"
 
-const Products = ({ products: { image, name, slug, price } }) => {
+const Products = ({ products: { image, name, slug, price }, gap }) => {
+  console.log(gap)
   return (
-    <div className="grid justify-center hover:scale-105 transition my-5 ">
+    <div className={` ${gap} grid justify-center hover:scale-105 transition my-5 `}>
 
 
       <div className=" cursor-pointer

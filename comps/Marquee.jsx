@@ -12,8 +12,8 @@ const Marquee = ({products}) => {
 
 
      <section className=' mt-10 relative h-96  w-full  overflow-hidden'>
-       <div className={` ${styles.anim} flex gap-5 justify-center` } >
-         {products.map((product)=><Products key={product._id} products={product} />)}
+       <div className={` ${styles.anim} flex  justify-center` } >
+         {products.map((product)=><Products gap={'mr-5'} key={product._id} products={product} />)}
        </div>
      </section>
 
