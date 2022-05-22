@@ -1,3 +1,4 @@
+import FooterBanner from "./FooterBanner"
 import MainBanner from "./MainBanner"
 import Products from "./Products"
 
@@ -36,6 +37,10 @@ const Home = ({ products, bannerData }) => {
        })}
 
       </section>
+
+      {/* ==== FOOTER BANNER  */}
+      <FooterBanner bannerData={bannerData && bannerData[1]} />
+      
     </main>
   )
 }

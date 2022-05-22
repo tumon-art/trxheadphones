@@ -3,7 +3,7 @@ import Home from '../comps/Home'
 import { client } from '../lib/client'
 
 export default function index({ products, bannerData }) {
-
+  
   return (
     <>
 

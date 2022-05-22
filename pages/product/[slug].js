@@ -2,15 +2,23 @@ import React, { useState } from 'react';
 import { AiFillBell, AiFillStar, AiOutlineMinus, AiOutlinePlus, AiOutlineStar } from 'react-icons/ai'
 import Marquee from '../../comps/Marquee';
 import { client, urlFor } from "../../lib/client"
+import Img from 'next/image';
+import { useNextSanityImage } from 'next-sanity-image';
 
 
 
 
 const ProductDetails = ({ product, products }) => {
-    const { image, name, details, price } = product;
-
+    // const { image, name, details, price } = product;
+   
     // USE STATES
     const [index, setindex] = useState(0)
+
+    const imageProps = useNextSanityImage(
+        client,
+        product.image[index]
+    );
+
 
     return (
         <div className=' sm:px-10 py-10'>
@@ -24,20 +32,23 @@ const ProductDetails = ({ product, products }) => {
                         hover:bg-red-600 transition duration-300
                         h-64 w-auto lg:h-96
                         bg-zinc-300 sm:rounded-2xl'
-                            src={urlFor(image && image[index])}
+                            src={urlFor(product.image && product.image[index])}
                         />
+
 
                         {/* === MORE IMAGES */}
                         <div className='flex ml-2 sm:ml-0'>
-                            {image?.map((e, i) => (
-                                <img
-                                    src={urlFor(e, i)}
+                            {product.image.map((e, i) => (
+                                    <img
+                                    src={urlFor(e)}
                                     className='h-14 bg-zinc-300 mt-4 mr-4 
                                     transition duration-200
                                     hover:bg-red-600 rounded-xl w-auto'
                                     onMouseOver={() => setindex(i)}
                                 />
-                            ))}
+                                ))}
+
+                    
                         </div>
                     </div>
 
@@ -61,9 +72,9 @@ const ProductDetails = ({ product, products }) => {
                             <div className=' text-sky-900 font-medium'>
                                 DETAILS:
                             </div>
-                            <p className='md:w-1/3 text-zinc-600'> {details}</p>
+                            <p className='md:w-1/3 text-zinc-600'> {product.details}</p>
 
-                            <div className=' my-4 text-2xl font-bold'> ${price} </div>
+                            <div className=' my-4 text-2xl font-bold'> ${product.price} </div>
 
                             {/* ==== QUANTITY SHOW  */}
                             <div className='flex'>
