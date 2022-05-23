@@ -30,7 +30,7 @@ const ProductDetails = ({ product, products }) => {
 
                         <img className=' object-cover
                         hover:bg-red-600 transition duration-300
-                        h-64 w-auto lg:h-96
+                        h-64 w-64 lg:h-96 lg:w-96
                         bg-zinc-300 sm:rounded-2xl'
                             src={urlFor(product.image && product.image[index])}
                         />
