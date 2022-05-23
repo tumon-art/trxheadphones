@@ -39,7 +39,7 @@ const ProductDetails = ({ product, products }) => {
                         {/* === MORE IMAGES */}
                         <div className='flex ml-2 sm:ml-0'>
                             {product.image.map((e, i) => (
-                                    <img
+                                    <img key={i}
                                     src={urlFor(e)}
                                     className='h-14 bg-zinc-300 mt-4 mr-4 
                                     transition duration-200

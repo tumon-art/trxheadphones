@@ -6,7 +6,6 @@ import { client } from '../lib/client'
 import { urlFor } from '../lib/client'
 
 const MainBanner = ({ banner }) => {
-
   const imageProps = useNextSanityImage(
 		client,
 		banner.image
@@ -42,7 +41,7 @@ const MainBanner = ({ banner }) => {
         <Img {...imageProps} layout='responsive' />
         </div>
 
-        <Link href={`product/${banner.product}`}>
+        <Link href={`/product/${banner.product}`}>
           <a className=' mt-4 sm:mt-6 md:mt-4 lg:mt-10 text-center
            shadow-lg font-extrabold shadow-red-400
            w-32 bg-red-700 text-white px-4 rounded-lg py-1'>

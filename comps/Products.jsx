@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { urlFor } from "../lib/client"
 import { client } from "../lib/client"
 import Img from 'next/image';
 import { useNextSanityImage } from 'next-sanity-image';
@@ -28,7 +27,7 @@ const Products = ({ products, gap }) => {
 
       {/* === NAME & PRICE */}
       <section className=" mx-2 flex mt-2 justify-between">
-        <nav className="">
+        <nav className=" text-sm font-medium">
           <p> {products.name} </p>
           <b> ${products.price} </b>
         </nav>
