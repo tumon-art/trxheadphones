@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { AiFillBell, AiFillStar, AiOutlineMinus, AiOutlinePlus, AiOutlineStar } from 'react-icons/ai'
+import { AiFillStar, AiOutlineMinus, AiOutlinePlus, AiOutlineStar } from 'react-icons/ai'
 import Marquee from '../../comps/Marquee';
 import { client, urlFor } from "../../lib/client"
-import Img from 'next/image';
 import { useNextSanityImage } from 'next-sanity-image';
 
 
@@ -16,7 +15,8 @@ const ProductDetails = ({ product, products }) => {
 
     const imageProps = useNextSanityImage(
         client,
-        product.image[index]
+        product.image[index],
+        
     );
 
 

@@ -3,8 +3,6 @@ import Img from 'next/image';
 import { useNextSanityImage } from 'next-sanity-image';
 import { client } from '../lib/client'
 
-import { urlFor } from '../lib/client'
-
 const MainBanner = ({ banner }) => {
   const imageProps = useNextSanityImage(
 		client,
@@ -37,8 +35,9 @@ const MainBanner = ({ banner }) => {
         {/* === MAIN IMAGE  */}
 
         <div className='drop-shadow-2xl absolute w-48 sm:self-center
-          lg:w-[340px] sm:w-60 self-end lg:self-center'>
-        <Img {...imageProps} layout='responsive' />
+          lg:w-[340px] sm:w-60 self-end pt-10 sm:pt-0 lg:self-center'>
+        <Img className=' hover:scale-110 transition' 
+        {...imageProps} layout='responsive' />
         </div>
 
         <Link href={`/product/${banner.product}`}>

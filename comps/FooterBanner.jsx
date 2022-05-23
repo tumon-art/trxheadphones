@@ -37,7 +37,7 @@ const FooterBanner = ({ bannerData }) => {
         {/* === MAIN IMAGE  */}
         <div className='drop-shadow-2xl absolute top-10 
         sm:top-0 w-48 md:self-center lg:w-[400px]
-        hover:scale-125 lg:top-[-58px] sm:w-60
+        hover:scale-110 lg:top-[-58px] sm:w-60
         self-end z-10 lg:self-center transition'>
 
           <Img {...imageProps} layout='responsive' />
