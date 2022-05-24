@@ -4,9 +4,7 @@ import { RiShoppingCartLine } from 'react-icons/ri'
 const Navbar = () => {
 
   const num = [{a:"4"},{a:"2"},{a:"3"},{a:"1"},]
-   const one = num.sort((a,b)=> parseFloat(a.a) -  parseFloat(b.a))
-
-   console.log(one)
+  const one = num.sort((a,b)=> parseFloat(a.a) -  parseFloat(b.a))
 
   return (
     <div className="   border-zinc-500 px-1 my-1 md:mx-24 flex justify-between">
