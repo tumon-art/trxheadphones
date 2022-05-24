@@ -1,61 +1,68 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { AiFillStar, AiOutlineMinus, AiOutlinePlus, AiOutlineStar } from 'react-icons/ai'
 import Marquee from '../../comps/Marquee';
 import { client, urlFor } from "../../lib/client"
 import { useNextSanityImage } from 'next-sanity-image';
+import { UC } from '../../context/UC';
 
 
 
 
 const ProductDetails = ({ product, products }) => {
-    // const { image, name, details, price } = product;
-   
+
+    const {
+        incQty, decQty,
+        qty
+    } = useContext(UC)
+
+    
     // USE STATES
-    const [index, setindex] = useState(0)
+    const [photoIndex, setphotoIndex] = useState(0)
 
     const imageProps = useNextSanityImage(
         client,
-        product.image[index],
-        
+        product.image[photoIndex],
+
     );
 
 
     return (
         <div className=' sm:px-10 py-10'>
             <div>
-                <div className=' sm:flex '>
+                <div className=' sm:flex'>
 
                     {/* === IMAGE  */}
-                    <div className=' grid sm:block justify-center '>
+                    <section name='image' className='  grid sm:block justify-center '>
 
                         <img className=' object-cover
                         hover:bg-red-600 transition duration-300
                         h-64 w-64 lg:h-96 lg:w-96
                         bg-zinc-300 sm:rounded-2xl'
-                            src={urlFor(product.image && product.image[index])}
+                            src={urlFor(product.image && product.image[photoIndex])}
                         />
 
 
                         {/* === MORE IMAGES */}
                         <div className='flex ml-2 sm:ml-0'>
                             {product.image.map((e, i) => (
-                                    <img key={i}
+                                <img key={i}
                                     src={urlFor(e)}
                                     className='h-14 bg-zinc-300 mt-4 mr-4 
                                     transition duration-200
                                     hover:bg-red-600 rounded-xl w-auto'
                                     onMouseOver={() => setindex(i)}
                                 />
-                                ))}
+                            ))}
 
-                    
+
                         </div>
-                    </div>
+                    </section>
 
 
 
 
-                    <section className='  mt-10 sm:mt-0 text-red-600 sm:ml-10'>
+                    <section name='details'
+                        className=' mt-10 sm:mt-0 text-red-600 sm:ml-10'>
 
                         <div className=' ml-2'>
                             {/* === PRODUCT DETAILS & REVIEWS */}
@@ -69,10 +76,10 @@ const ProductDetails = ({ product, products }) => {
                                 <span className=' text-zinc-500 text-sm mx-1'> (9) </span>
                             </div>
 
-                            <div className=' text-sky-900 font-medium'>
+                            <div className=' text-sky-900 font-medium '>
                                 DETAILS:
                             </div>
-                            <p className='md:w-1/3 text-zinc-600'> {product.details}</p>
+                            <p className='w-2/3 text-zinc-600'> {product.details}</p>
 
                             <div className=' my-4 text-2xl font-bold'> ${product.price} </div>
 
@@ -80,15 +87,22 @@ const ProductDetails = ({ product, products }) => {
                             <div className='flex'>
                                 <h3 className='text-sky-900 font-semibold'> Quantity:</h3>
 
-                                <div className=' w-32 ring-gray-400 
-                            flex justify-center items-center ring-1 ml-4 px-4'>
+                                <div className=' w-40 ring-gray-400 
+                                     flex justify-center items-center ring-1 ml-4 px-4'>
 
-                                    <span className='hover:scale-150 transition mx-2'>
+                                    <span className='hover:scale-150 transition mx-2'
+                                    onClick={()=>decQty()}
+                                    >
                                         <AiOutlineMinus />
                                     </span>
                                     <p className=' font-medium text-gray-800
-                             mx-2 border-r-2 border-gray-400 my-1 border-l-2 px-4'> 0 </p>
-                                    <span className=' hover:scale-150 transition text-green-700 mx-2 '>
+                                    mx-2 border-r-2 border-gray-400 my-1 border-l-2 px-4'
+                                    >
+                                        {qty} 
+                                    </p>
+                                    <span className=' hover:scale-150 transition text-green-700 mx-2 '
+                                    onClick={()=>incQty()}
+                                    >
                                         <AiOutlinePlus />
                                     </span>
 
@@ -106,7 +120,7 @@ const ProductDetails = ({ product, products }) => {
                             </div>
 
                             <div className=' text-center hover:scale-105 transition shadow-md
-                            bg-red-600 text-xl px-8 py-2 text-white ring-1 ring-red-600'>
+                            bg-red-600 text-xl px-8 py-2  text-white ring-1 ring-red-600'>
                                 Buy Now
                             </div>
                         </div>

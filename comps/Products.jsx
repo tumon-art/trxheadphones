@@ -19,7 +19,7 @@ const Products = ({ products, gap }) => {
        rounded-md  bg-gray-300 h-32 w-32 sm:h-40 sm:w-40 lg:h-56 lg:w-56">
         {/* === IMAGE */}
         <Link href={`/product/${products.slug.current}`}>
-        <Img className=" object-cover" alt="headphone" {...imageProps} layout='responsive' />
+        <a><Img className=" object-cover" alt="headphone" {...imageProps} layout='responsive' /></a>
         </Link>
       </div>
       
