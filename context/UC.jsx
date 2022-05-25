@@ -19,7 +19,32 @@ export const Provider = ({ children }) => {
             if(p - 1 < 1) return 1;
             return p -1
         })
-    } 
+    }
+
+    // ADD TO CART
+    const onAdd = (product, quantity) => {
+        const checkProductInCart = cartItems.find((item)=> item._id === product._id);
+
+        settotalPrice((p)=> p + product.price * quantity)
+        settotalQuantities((p)=> p + quantity)
+
+        if(checkProductInCart) {
+            const updatedCartItems = cartItems.map((cartProduct)=> {
+                if(cartProduct._id === product._id) return {
+                    ...cartProduct,
+                    quantity: cartProduct.quantity + quantity
+                }
+            })
+        setcartItems(updatedCartItems)
+
+        } else {
+            product.quantity = quantity;
+            
+            setcartItems([...cartItems, {...product}])
+        }
+        console.log(cartItems)
+        // Toast.success(`${qty} ${product.name} added to the cart.`);
+    }
     
     return (
         <UC.Provider
@@ -30,7 +55,8 @@ export const Provider = ({ children }) => {
                 totalQuantities,
                 qty,
                 incQty,
-                decQty
+                decQty,
+                onAdd
             }}
         >
             {children}

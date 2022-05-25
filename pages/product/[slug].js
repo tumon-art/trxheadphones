@@ -8,11 +8,60 @@ import { UC } from '../../context/UC';
 
 
 
+
+
+
+
+
+// const onAdd = (product, quantity) => {
+//     const checkProductInCart = cartItems.find((item) => item._id === product._id);
+    
+//     setTotalPrice((prevTotalPrice) => prevTotalPrice + product.price * quantity);
+//     setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity);
+    
+//     if(checkProductInCart) {
+//       const updatedCartItems = cartItems.map((cartProduct) => {
+//         if(cartProduct._id === product._id) return {
+//           ...cartProduct,
+//           quantity: cartProduct.quantity + quantity
+//         }
+//       })
+
+//       setCartItems(updatedCartItems);
+//     } else {
+//       product.quantity = quantity;
+      
+//       setCartItems([...cartItems, { ...product }]);
+//     }
+
+//     toast.success(`${qty} ${product.name} added to the cart.`);
+//   } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const ProductDetails = ({ product, products }) => {
 
     const {
         incQty, decQty,
-        qty
+        qty, onAdd
     } = useContext(UC)
 
     
@@ -113,11 +162,12 @@ const ProductDetails = ({ product, products }) => {
 
                         {/* ==== ADD AND BUY */}
                         <div className=' sm:flex w-full gap-4 mt-4 px-1'>
-                            <div className=' text-center mb-4 sm:mb-0 hover:scale-105 transition
-                             text-xl px-8 py-2 ring-1 ring-red-600
-                             '>
+                            <button className=' text-center mb-4 sm:mb-0 hover:scale-105 transition
+                             text-xl px-8 py-2 ring-1 ring-red-600'
+                             onClick={()=> onAdd(product,qty) }
+                             >
                                 Add to Cart
-                            </div>
+                            </button>
 
                             <div className=' text-center hover:scale-105 transition shadow-md
                             bg-red-600 text-xl px-8 py-2  text-white ring-1 ring-red-600'>
