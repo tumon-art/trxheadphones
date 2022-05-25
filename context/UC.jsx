@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react'
-import { Toast } from 'react-hot-toast';
+import { toast } from 'react-hot-toast';
 
 export const UC = createContext()
 
@@ -42,20 +42,19 @@ export const Provider = ({ children }) => {
             
             setcartItems([...cartItems, {...product}])
         }
-        console.log(cartItems)
-        // Toast.success(`${qty} ${product.name} added to the cart.`);
+        
+        toast.success(`${qty} ${product.name} added to the cart.`);
     }
     
     return (
         <UC.Provider
             value={{
-                showCart,
+                showCart, setshowCart,
                 cartItems,
                 totalPrice,
                 totalQuantities,
                 qty,
-                incQty,
-                decQty,
+                incQty,decQty,
                 onAdd
             }}
         >

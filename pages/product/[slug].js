@@ -6,57 +6,6 @@ import { useNextSanityImage } from 'next-sanity-image';
 import { UC } from '../../context/UC';
 
 
-
-
-
-
-
-
-
-// const onAdd = (product, quantity) => {
-//     const checkProductInCart = cartItems.find((item) => item._id === product._id);
-    
-//     setTotalPrice((prevTotalPrice) => prevTotalPrice + product.price * quantity);
-//     setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity);
-    
-//     if(checkProductInCart) {
-//       const updatedCartItems = cartItems.map((cartProduct) => {
-//         if(cartProduct._id === product._id) return {
-//           ...cartProduct,
-//           quantity: cartProduct.quantity + quantity
-//         }
-//       })
-
-//       setCartItems(updatedCartItems);
-//     } else {
-//       product.quantity = quantity;
-      
-//       setCartItems([...cartItems, { ...product }]);
-//     }
-
-//     toast.success(`${qty} ${product.name} added to the cart.`);
-//   } 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const ProductDetails = ({ product, products }) => {
 
     const {
@@ -99,7 +48,7 @@ const ProductDetails = ({ product, products }) => {
                                     className='h-14 bg-zinc-300 mt-4 mr-4 
                                     transition duration-200
                                     hover:bg-red-600 rounded-xl w-auto'
-                                    onMouseOver={() => setindex(i)}
+                                    onMouseOver={() => setphotoIndex(i)}
                                 />
                             ))}
 

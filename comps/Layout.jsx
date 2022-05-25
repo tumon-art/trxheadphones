@@ -3,8 +3,9 @@ import Footer from "./Footer"
 import Navbar from "./Navbar"
 
 const Layout = ({children}) => {
+    
     return (
-        <div>
+        <div className=" overflow-hidden">
 
             <Head>
                 <title> TRX Headphones </title>
