@@ -13,7 +13,7 @@ const ProductDetails = ({ product, products }) => {
         qty, onAdd
     } = useContext(UC)
 
-    
+
     // USE STATES
     const [photoIndex, setphotoIndex] = useState(0)
 
@@ -86,20 +86,20 @@ const ProductDetails = ({ product, products }) => {
                                 <h3 className='text-sky-900 font-semibold'> Quantity:</h3>
 
                                 <div className=' w-40 ring-gray-400 
-                                     flex justify-center items-center ring-1 ml-4 px-4'>
+                                    flex justify-center items-center ring-1 ml-4 px-4'>
 
                                     <span className='hover:scale-150 transition mx-2'
-                                    onClick={()=>decQty()}
+                                        onClick={() => decQty()}
                                     >
                                         <AiOutlineMinus />
                                     </span>
                                     <p className=' font-medium text-gray-800
-                                    mx-2 border-r-2 border-gray-400 my-1 border-l-2 px-4'
+                                       mx-2 border-r-2 border-gray-400 my-1 border-l-2 px-4'
                                     >
-                                        {qty} 
+                                        {qty}
                                     </p>
                                     <span className=' hover:scale-150 transition text-green-700 mx-2 '
-                                    onClick={()=>incQty()}
+                                        onClick={() => incQty()}
                                     >
                                         <AiOutlinePlus />
                                     </span>
@@ -113,8 +113,8 @@ const ProductDetails = ({ product, products }) => {
                         <div className=' sm:flex w-full gap-4 mt-4 px-1'>
                             <button className=' text-center mb-4 sm:mb-0 hover:scale-105 transition
                              text-xl px-8 py-2 ring-1 ring-red-600'
-                             onClick={()=> onAdd(product,qty) }
-                             >
+                                onClick={() => onAdd(product, qty)}
+                            >
                                 Add to Cart
                             </button>
 
