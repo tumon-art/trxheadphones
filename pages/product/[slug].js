@@ -110,13 +110,13 @@ const ProductDetails = ({ product, products }) => {
                         </div>
 
                         {/* ==== ADD AND BUY */}
-                        <div className=' sm:flex w-full gap-4 mt-4 px-1'>
-                            <div className=' text-center mb-4 sm:mb-0 hover:scale-105 transition
-                             text-xl px-8 py-2 ring-1 ring-red-600 w-full '
+                        <div className=' sm:flex w-full gap-4 mt-8 px-1'>
+                            <button className=' flex justify-center items-center mb-4 sm:mb-0 hover:scale-105 transition
+                             text-xl px-8 py-2 ring-1 ring-red-600 w-full sm:w-auto '
                                 onClick={() => onAdd(product, qty)}
                             >
                                 Add to Cart
-                            </div>
+                            </button>
 
                             <div className=' text-center hover:scale-105 transition shadow-md
                             bg-red-600 text-xl px-8 py-2  text-white ring-1 ring-red-600'>
