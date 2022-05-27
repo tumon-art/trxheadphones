@@ -25,22 +25,17 @@ export const Provider = ({ children }) => {
     // ADD TO CART
     const onAdd = (product, quantity) => {
         const checkProductInCart = cartItems.find((item)=> item._id === product._id);
-
         settotalPrice((p)=> p + product.price * quantity)
         settotalQuantities((p)=> p + quantity)
 
         if(checkProductInCart) {
-            const updatedCartItems = cartItems.map((cartProduct)=> {
-                if(cartProduct._id === product._id) return {
-                    ...cartProduct,
-                    quantity: cartProduct.quantity + quantity
-                }
-            })
-        setcartItems(updatedCartItems)
-
-        } else {
-            product.quantity = quantity;
+            const foundProduct = cartItems.find((item)=> item._id === product._id)
+            const newCartItems = cartItems.filter((item)=> item._id !== product._id)
+            setcartItems([...newCartItems,{...foundProduct, quantity:foundProduct.quantity + quantity}])
+        }
+        else {
             
+            product.quantity = quantity;
             setcartItems([...cartItems, {...product}])
         }
         
@@ -65,7 +60,7 @@ export const Provider = ({ children }) => {
         const newCartItems = cartItems.filter((item)=> item._id !== id)
 
        if(value === 'inc') {
-        setcartItems([...newCartItems,{...foundProduct, quantity:foundProduct.quantity +1}])
+        setcartItems([...newCartItems,{...foundProduct, quantity:foundProduct.quantity + 1}])
         settotalPrice((p)=> p + foundProduct.price)
         settotalQuantities((p)=> p + 1)
        } else if(value === 'dec') {
@@ -78,8 +73,6 @@ export const Provider = ({ children }) => {
 
     }
     
-    // CONSOLE 
-
     return (
         <UC.Provider
             value={{

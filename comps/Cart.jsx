@@ -72,10 +72,10 @@ const Cart = () => {
             <div className=' grid w-full px-4'>
               <section className=' flex justify-between w-full'>
                 <h4 className=' text-xl text-cyan-900 font-bold'>
-                  {item.name}
+                  {item?.name}
                 </h4>
                 <h5 className=' text-xl text-cyan-900 font-bold'>
-                  ${item.price}
+                  ${item?.price}
                 </h5>
               </section>
 
@@ -91,7 +91,7 @@ const Cart = () => {
                 <p className=' font-medium text-gray-800
                   mx-2 border-r-2 border-gray-400 my-1 border-l-2 px-4'
                 >
-                  {item.quantity}
+                  {item?.quantity}
                 </p>
                 <span className=' hover:scale-150 transition text-green-700 mx-2 '
                   onClick={() => toggleCartItemQuantity(item._id,'inc')}
