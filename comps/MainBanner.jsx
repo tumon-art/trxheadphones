@@ -10,8 +10,9 @@ const MainBanner = ({ banner }) => {
 	);
   
   return (
-    <main className='md:mx-20 md:rounded-xl md:h-64 md:mb-8
-   relative h-60 lg:h-80 pl-4 my-2 bg-gray-300 md:px-10
+    <main className=' md:mx-20 md:rounded-xl md:h-64 md:mb-8
+     shadow-gray-400
+   relative shadow-sm h-60 lg:h-80 pl-4 my-2 bg-gray-300 md:px-10
     '>
 
       <section className='flex flex-col' >

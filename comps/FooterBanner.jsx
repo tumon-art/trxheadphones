@@ -12,7 +12,7 @@ const FooterBanner = ({ bannerData }) => {
 
   return (
 
-    <main className='md:mx-20 md:rounded-3xl md:h-64 md:mb-8 relative
+    <main className=' md:mx-20 md:rounded-3xl md:h-64 md:mb-8 relative
      h-60 lg:h-[340px] pl-4 my-10 bg-red-600 md:px-10 '>
 
       <section className='flex flex-col' >

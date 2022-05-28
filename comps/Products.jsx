@@ -15,7 +15,7 @@ const Products = ({ products, gap }) => {
     <div className={` ${gap} grid justify-center hover:scale-105 transition my-5 `}>
 
 
-      <div className=" cursor-pointer
+      <div className=" cursor-pointer shadow-sm shadow-gray-300
        rounded-md  bg-gray-300 h-32 w-32 sm:h-40 sm:w-40 lg:h-56 lg:w-56">
         {/* === IMAGE */}
         <Link href={`/product/${products.slug.current}`}>

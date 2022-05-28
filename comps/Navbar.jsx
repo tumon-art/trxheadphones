@@ -8,11 +8,13 @@ const Navbar = () => {
 
   const {showCart, setshowCart, totalQuantities} = useContext(UC)
   return (
-    <div className=" border-zinc-500 px-1 my-1 md:mx-4 flex justify-between">
+    <div className=" border-zinc-500 px-1 sm:my-1  md:mx-4 flex justify-between">
 
       <h3 className=' self-end'>
         <Link href='/' >
-          <a className=' flex items-end font-mono text-zinc-400 font-semibold '> TRX Headphones
+          <a className=' flex items-end font-mono text-zinc-700  border-b-2 border-r-[22px] border-l-[22px]
+            sm:border-0
+           pl-2 pr-2 border-dashed font-semibold '> TRX Headphones
             <svg className=' h-6 ml-1 w-auto'
               viewBox="0 0 24 26" strokeWidth="1.5" stroke="currentColor" fill="none" >
               <path d="M3 17c3.333 -3.333 5 -6 5 -8c0 -3 -1 -3 -2 -3s-2.032 1.085 

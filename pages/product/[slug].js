@@ -30,11 +30,12 @@ const ProductDetails = ({ product, products }) => {
                 <div className=' sm:flex'>
 
                     {/* === IMAGE  */}
-                    <section name='image' className='  grid sm:block justify-center '>
+                    <section name='image' className=' grid sm:block justify-center '>
 
                         <img className=' object-cover
                         hover:bg-red-600 transition duration-300
                         h-64 w-64 lg:h-96 lg:w-96
+                          
                         bg-zinc-300 sm:rounded-2xl'
                             src={urlFor(product.image && product.image[photoIndex])}
                         />
