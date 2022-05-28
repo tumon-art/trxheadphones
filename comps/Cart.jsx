@@ -28,7 +28,7 @@ const Cart = () => {
       <div className=' relative overflow-y-auto  float-right h-full transition-all duration-500
       bg-white w-full md:w-2/4 lg:w-2/5'>
 
-        <div className=' fixed bg-red-600 h-10 flex items-center pl-1 sm:pl-4 w-full'>
+        <div className=' fixed bg-red-600 h-10 flex items-center pl-1 sm:pl-4 w-full shadow-sm shadow-gray-400'>
           <button className='flex gap-2 items-center text-lg'
             onClick={() => setshowCart(false)}>
             <AiOutlineLeft className='text-2xl text-white' />
