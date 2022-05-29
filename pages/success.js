@@ -17,7 +17,7 @@ const Success = () => {
   }, []);
 
   return (
-    <div className=" sm: mb-24 flex justify-center items-center">
+    <div className=" my-10 flex justify-center items-center">
       <div className=" sm:m-10 my-10 bg-gray-300 sm:rounded-xl py-10 sm:px-10">
         <p className=" text-green-600 text-4xl flex justify-center">
           <BsBagCheckFill />

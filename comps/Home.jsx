@@ -8,10 +8,10 @@ const Home = ({ products, bannerData }) => {
   const [sort,setsort] = useState('')
 
   // SORT LOW TO HIGH
-  const lowToHigh = () => products.sort((a,b)=> parseFloat(b.price) -  parseFloat(a.price))
+  const lowToHigh = () => products.sort((a,b)=> parseFloat(a.price) -  parseFloat(b.price))
 
   // SORT HIGH TO LOW
-  const highToLow = () => products.sort((a,b)=> parseFloat(a.price) -  parseFloat(b.price))
+  const highToLow = () => products.sort((a,b)=> parseFloat(b.price) -  parseFloat(a.price))
 
 
   // SELECT HANDLE 
