@@ -77,9 +77,9 @@ export const Provider = ({ children }) => {
         <UC.Provider
             value={{
                 showCart, setshowCart,
-                cartItems,
-                totalPrice,
-                totalQuantities,
+                cartItems, setcartItems,
+                totalPrice, settotalPrice,
+                totalQuantities, settotalQuantities,
                 qty,
                 incQty,decQty,
                 onAdd,
