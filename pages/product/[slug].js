@@ -33,7 +33,7 @@ const ProductDetails = ({ product, products }) => {
                     <section name='image' className=' grid sm:block justify-center '>
 
                         <img className=' object-cover
-                        hover:bg-red-600 transition duration-300
+                        hover:bg-green-500 transition duration-300
                         h-64 w-64 lg:h-96 lg:w-96
                           
                         bg-zinc-300 sm:rounded-2xl'
@@ -48,7 +48,7 @@ const ProductDetails = ({ product, products }) => {
                                     src={urlFor(e)}
                                     className='h-14 bg-zinc-300 mt-4 mr-4 
                                     transition duration-200
-                                    hover:bg-red-600 rounded-xl w-auto'
+                                    hover:bg-green-600 rounded-xl w-auto'
                                     onMouseOver={() => setphotoIndex(i)}
                                 />
                             ))}
@@ -61,7 +61,7 @@ const ProductDetails = ({ product, products }) => {
 
 
                     <section name='details'
-                        className=' mt-10 sm:mt-0 text-red-600 sm:ml-10'>
+                        className=' mt-10 sm:mt-0 text-green-600 sm:ml-10'>
 
                         <div className=' ml-2'>
                             {/* === PRODUCT DETAILS & REVIEWS */}
@@ -89,7 +89,7 @@ const ProductDetails = ({ product, products }) => {
                                 <div className=' w-40 ring-gray-400 
                                     flex justify-center items-center ring-1 ml-4 px-4'>
 
-                                    <span className='hover:scale-150 transition mx-2'
+                                    <span className='hover:scale-150 text-red-600 transition mx-2'
                                         onClick={() => decQty()}
                                     >
                                         <AiOutlineMinus />
@@ -113,14 +113,14 @@ const ProductDetails = ({ product, products }) => {
                         {/* ==== ADD AND BUY */}
                         <div className=' sm:flex w-full gap-4 mt-8 px-1'>
                             <button className=' flex justify-center items-center mb-4 sm:mb-0 hover:scale-105 transition
-                             text-xl px-8 py-2 ring-1 ring-red-600 w-full sm:w-auto '
+                             text-xl px-8 py-2 ring-1 ring-green-600 w-full sm:w-auto '
                                 onClick={() => onAdd(product, qty)}
                             >
                                 Add to Cart
                             </button>
 
                             <div className=' text-center hover:scale-105 transition shadow-md
-                            bg-red-600 text-xl px-8 py-2  text-white ring-1 ring-red-600'>
+                            bg-green-600 text-xl px-8 py-2  text-white ring-1 ring-green-600'>
                                 Buy Now
                             </div>
                         </div>

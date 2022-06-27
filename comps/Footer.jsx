@@ -2,14 +2,14 @@ const Footer = () => {
   return (
     <div className=" mt-20 mx-4 text-center flex flex-col items-center">
 
-      <p className=" font-bold text-sm"> 2022 TRX Headphones All rights reserverd </p>
+      <p className=" font-semibold text-zinc-900 text-sm"> © 2022 TRX Headphones All rights reserverd </p>
 
       <nav className=" flex mt-2 mb-2">
 
         {/* === INSTAGRAM LOGO */}
         <svg className="  h-8 w-auto cursor-pointer"
           viewBox="0 0 24 24" strokeWidth="1.5" stroke="#2c3e50"
-          fill="none">
+          fill="none"> <title> Demo </title>
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <rect x="4" y="4" width="16" height="16" rx="4" />
           <circle cx="12" cy="12" r="3" />
@@ -19,7 +19,7 @@ const Footer = () => {
         {/* === FACEBOOK LOGO */}
         <svg className=" h-8 w-auto cursor-pointer"
           viewBox="0 0 24 24" strokeWidth="1.5" stroke="#2c3e50" fill="none"
-          >
+        > <title> Demo </title>
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
         </svg>
@@ -27,14 +27,14 @@ const Footer = () => {
         {/* === TELEGRAM LOGO  */}
 
         <svg className=" h-8 w-auto cursor-pointer" viewBox="0 0 24 24" strokeWidth="1.5"
-          stroke="#2c3e50" fill="none" >
+          stroke="#2c3e50" fill="none" > <title> Demo </title>
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
         </svg>
 
         {/* === VIEMO LOGO  */}
         <svg className=" h-8 w-auto pl-1 cursor-pointer" viewBox="0 0 24 24" strokeWidth="1.5"
-          stroke="#2c3e50" fill="none" >
+          stroke="#2c3e50" fill="none" > <title> Demo </title>
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M3 8.5l1 1s1.5 -1.102 2 -.5c.509 .609 1.863 7.65 2.5 9c.556 1.184 1.978 
           2.89 4 1.5c2 -1.5 7.5 -5.5 8.5 -11.5c.444 -2.661 -1 -4 -2.5 -4c-2 0 -4.047 1.202 

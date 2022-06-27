@@ -12,23 +12,23 @@ const FooterBanner = ({ bannerData }) => {
 
   return (
 
-    <main className=' md:mx-20 md:rounded-3xl md:h-64 md:mb-8 relative
-     h-60 lg:h-[340px] pl-4 my-10 bg-red-600 md:px-10 '>
+    <main className=' ring-8 ring-green-500 shadow-2xl shadow-green-300
+     md:mx-20 md:rounded-3xl md:h-64 md:mb-8 relative bg-gradient-to-r from-green-700
+     h-60 lg:h-[340px] pl-4 my-10 bg-green-500 md:px-10 '>
 
       <section className='flex flex-col' >
 
         <div className='mt-10 lg:mt-20'>
           <p className=' font-bold text-lg text-white'>
-            {bannerData.discount}
+          {bannerData.discount}
           </p>
           <h3 className='drop-shadow-lg text-white
           md:text-4xl text-2xl font-sans font-extrabold'>
-            {bannerData.midText}
+          {bannerData.midText}
           </h3>
 
           <h1 className='drop-shadow-lg md:text-7xl text-5xl font-sans 
-            animate-pulse pt-3
-            font-extrabold text-zinc-50'>
+            animate-pulse pt-3 font-extrabold text-zinc-50'>
             {/* {banner.largeText1} */}
             NOW!
           </h1>
@@ -52,13 +52,15 @@ const FooterBanner = ({ bannerData }) => {
           <a className=' lg:absolute lg:right-8 lg:bottom-10
             mt-4 sm:mt-6 md:mt-4 lg:mt-10 text-center
             font-extrabold hover:scale-110 transition
-            w-32 bg-zinc-50 text-red-600 px-4 rounded-lg py-1'>
+            w-32 bg-zinc-50 text-green-600 px-4 rounded-lg py-1'>
             {bannerData.buttonText}
           </a>
         </Link>
 
-        <p className=' hidden md:block md:text-2xl md:top-20 text-center text-white font-extrabold lg:text-4xl font-sans absolute right-10 top-10'>
-          STUNNING <span className=' text-zinc-400 '> SOUND </span> <br></br> & <br></br> TOTAL COMFORT
+        <p className=' hidden md:block md:text-2xl md:top-20 text-center drop-shadow-xl
+         text-white font-extrabold lg:text-4xl font-sans absolute right-10 top-10'>
+          STUNNING <span className=' text-green-300 drop-shadow-lg'> SOUND </span>
+          <br></br> & <br></br> TOTAL COMFORT
         </p>
       </section>
 
