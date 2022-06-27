@@ -70,11 +70,10 @@ const Products = ({ products, gap }) => {
           }}
           className={` 
           ${
-            global.localStorage &&
+            global.localStorage?.trxfav &&
             JSON.parse(localStorage.trxfav).filter(
               (each) => each._id == products._id
-            ).length >= 1 &&
-            "fill-red-600"
+            ).length >= 1 && "fill-red-600"
           }
           h-6 sm:h-10 self-start hover:text-rose-300 hover:fill-red-600 transition-colors
           duration-1000 text-zinc-200 z-10`}
