@@ -75,7 +75,7 @@ const Products = ({ products, gap }) => {
               (each) => each._id == products._id
             ).length >= 1 && "fill-red-600"
           }
-          h-6 sm:h-10 self-start hover:text-rose-300 hover:fill-red-600 transition-colors
+          h-6 sm:h-10 self-start hover:text-rose-300 sm:hover:fill-red-600 transition-colors
           duration-1000 text-zinc-200 z-10`}
           viewBox="0 0 24 24"
           fill="none"
