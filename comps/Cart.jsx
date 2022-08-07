@@ -127,6 +127,7 @@ const Cart = () => {
                       >
                         {item?.quantity}
                       </p>
+
                       <span
                         className=" hover:scale-150 transition text-green-700 mx-2 "
                         onClick={() => toggleCartItemQuantity(item._id, "inc")}
