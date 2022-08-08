@@ -1,17 +1,19 @@
 import Link from "next/link";
 import { useContext } from "react";
-import { RiShoppingCartLine } from "react-icons/ri";
 import { UC } from "../context/UC";
 import Cart from "./Cart";
+import toast, { Toaster } from "react-hot-toast";
 
 const Navbar = () => {
   const { showCart, setshowCart, totalQuantities } = useContext(UC);
+
+  const notify = () => toast.error("Not Ready Yet!");
+
   return (
     <div className=" border-zinc-500 mt-1 px-1 sm:my-1  md:mx-4 flex justify-between">
       <h3 className=" self-end">
         <Link href="/">
           <a className=" flex items-end font-mono text-zinc-700 font-bold ">
-            {" "}
             TRX Headphones
             <svg
               className=" h-6 ml-1 w-auto"
@@ -32,6 +34,7 @@ const Navbar = () => {
 
       <div className="flex gap-4">
         <svg
+          onClick={notify}
           className="h-6 w-6 text-zinc-600
            hover:text-green-600 cursor-pointer transition-colors"
           viewBox="0 0 24 24"
@@ -48,8 +51,9 @@ const Navbar = () => {
           4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
           />
         </svg>
-
+        <Toaster />
         <svg
+          onClick={notify}
           className="h-6 w-6 text-zinc-600
            hover:text-green-600 cursor-pointer transition-colors"
           fill="none"
