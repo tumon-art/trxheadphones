@@ -26,12 +26,14 @@ export const Provider = ({ children }) => {
     const checkProductInCart = cartItems.find(
       (item) => item._id === product._id
     );
+
     settotalPrice((p) => p + product.price * quantity);
     settotalQuantities((p) => p + quantity);
 
     if (checkProductInCart) {
       const foundProduct = cartItems.find((item) => item._id === product._id);
       const newCartItems = cartItems.filter((item) => item._id !== product._id);
+
       setcartItems([
         ...newCartItems,
         { ...foundProduct, quantity: foundProduct.quantity + quantity },
