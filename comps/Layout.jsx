@@ -1,32 +1,27 @@
-import Head from "next/head"
-import Footer from "./Footer"
-import Navbar from "./Navbar"
+import Head from "next/head";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
 
-const Layout = ({children}) => {
-    
-    return (
-        <div className=" overflow-hidden">
+const Layout = ({ children }) => {
+  return (
+    <div className=" overflow-hidden">
+      <Head>
+        <title> TRX Headphones </title>
+        <meta name="description" content=" The Best Headphone" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-            <Head>
-                <title> TRX Headphones </title>
-                <meta name="description" content=" This is Cat's World!" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
+      <header>
+        <Navbar />
+      </header>
 
-            <header>
-                <Navbar />
-            </header>
+      <main>{children}</main>
 
-            <main>
-                {children}
-            </main>
+      <footer>
+        <Footer />
+      </footer>
+    </div>
+  );
+};
 
-            <footer>
-                <Footer />
-            </footer>
-
-        </div>
-    )
-}
-
-export default Layout
+export default Layout;
