@@ -1,13 +1,8 @@
 const Header = () => {
-  const num = [{a:"4"},{a:"2"},{a:"3"},{a:"2"},]
-  num.sort((a,b)=> parseFloat(a.a) - parseFloat(a.a))
+  const num = [{ a: "4" }, { a: "2" }, { a: "3" }, { a: "2" }];
+  num.sort((a, b) => parseFloat(a.a) - parseFloat(a.a));
 
-  console.log(num)
-  return (
-   <>
-    header
-   </>
-  )
-}
+  return <>header</>;
+};
 
-export default Header
+export default Header;

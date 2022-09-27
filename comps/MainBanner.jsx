@@ -2,6 +2,7 @@ import Link from "next/link";
 import Img from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
 import { client } from "../lib/client";
+import { motion } from "framer-motion";
 
 const MainBanner = ({ banner }) => {
   const imageProps = useNextSanityImage(client, banner.image);
@@ -32,16 +33,21 @@ const MainBanner = ({ banner }) => {
 
         {/* === MAIN IMAGE  */}
 
-        <div
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          animate={{
+            rotate: [0, 0, -20, 20, 0],
+          }}
+          transition={{ duration: 0.4 }}
           className="drop-shadow-2xl absolute w-48 sm:self-center
           lg:w-[340px] sm:w-60 self-end pt-10 sm:pt-0 lg:self-center"
         >
-          <Img
-            className=" hover:scale-110 transition"
-            {...imageProps}
-            layout="responsive"
-          />
-        </div>
+          <Img className="  transition" {...imageProps} layout="responsive" />
+          <div
+            className=" absolute bottom-10 blur-md left-0 right-0 mx-auto
+           bg-black blur-1xl h-4 rounded-full opacity-20 w-32"
+          ></div>
+        </motion.div>
 
         <Link href={`/product/${banner.product}`}>
           <a
