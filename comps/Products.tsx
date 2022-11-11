@@ -3,13 +3,19 @@ import { client } from "../lib/client";
 import Img from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
 import { useState } from "react";
+import { ProductsTypes } from "../pages";
 
-const Products = ({ products, gap }) => {
+interface ProductsProps {
+  products: ProductsTypes;
+  gap?: string;
+}
+
+const Products = ({ products, gap }: ProductsProps) => {
   const [updata, setupdata] = useState(false);
 
   const imageProps = useNextSanityImage(client, products.image[0]);
 
-  const saveToLocalS = (product) => {
+  const saveToLocalS = (product: ProductsTypes) => {
     if (localStorage.trxfav) {
       if (
         JSON.parse(localStorage.trxfav).filter(
@@ -44,14 +50,12 @@ const Products = ({ products, gap }) => {
       >
         {/* === IMAGE */}
         <Link href={`/product/${products.slug.current}`}>
-          <a>
-            <Img
-              className=" object-cover"
-              alt="headphone"
-              {...imageProps}
-              layout="responsive"
-            />
-          </a>
+          <Img
+            className=" object-cover"
+            alt="headphone"
+            {...imageProps}
+            layout="responsive"
+          />
         </Link>
       </div>
 
@@ -83,7 +87,6 @@ const Products = ({ products, gap }) => {
           stroke="currentColor"
           strokeWidth={2}
         >
-          {" "}
           <title> Add To Favorite</title>
           <path
             strokeLinecap="round"

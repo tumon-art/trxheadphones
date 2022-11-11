@@ -50,14 +50,14 @@ const MainBanner = ({ banner }) => {
         </motion.div>
 
         <Link href={`/product/${banner.product}`}>
-          <a
+          <button
             className=" mt-4 sm:mt-6 md:mt-4 lg:mt-10 text-center
            shadow-lg font-extrabold shadow-green-500
            transition duration-1000
            w-32 bg-green-600 text-white px-4 rounded-lg py-1"
           >
             {banner.buttonText}
-          </a>
+          </button>
         </Link>
 
         <div className=" absolute right-10 bottom-10">

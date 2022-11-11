@@ -13,7 +13,7 @@ const Navbar = () => {
     <div className=" border-zinc-500 mt-1 px-1 sm:my-1  md:mx-4 flex justify-between">
       <h3 className=" self-end">
         <Link href="/">
-          <a className=" flex items-end font-mono text-zinc-700 font-bold ">
+          <div className=" flex items-end font-mono text-zinc-700 font-bold ">
             TRX Headphones
             <svg
               className=" h-6 ml-1 w-auto"
@@ -28,7 +28,7 @@ const Navbar = () => {
               1.333 4 3 4c.53 0 2.639 -2 3 -2c.517 0 1.517 .667 3 2"
               />
             </svg>
-          </a>
+          </div>
         </Link>
       </h3>
 
