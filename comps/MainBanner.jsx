@@ -10,9 +10,8 @@ const MainBanner = ({ banner }) => {
   return (
     <main
       className=" md:mx-20 md:rounded-xl md:h-64 md:mb-8
-     ring-8 ring-zinc-200 shadow-zinc-200
-   relative shadow-lg h-60 lg:h-80 pl-4 my-4 sm:my-8 bg-gray-300 md:px-10
-    "
+     ring-8 ring-lightDim1 shadow-lightDim
+     relative shadow-lg h-60 lg:h-80 pl-4 my-4 sm:my-8 bg-lightDim md:px-10"
     >
       <section className="flex flex-col">
         <div className="mt-10">
@@ -52,9 +51,9 @@ const MainBanner = ({ banner }) => {
         <Link href={`/product/${banner.product}`}>
           <button
             className=" mt-4 sm:mt-6 md:mt-4 lg:mt-10 text-center
-           shadow-lg font-extrabold shadow-green-500
+           shadow-lg font-extrabold shadow-dim
            transition duration-1000
-           w-32 bg-green-600 text-white px-4 rounded-lg py-1"
+           w-32 bg-primary text-white px-4 rounded-lg py-1"
           >
             {banner.buttonText}
           </button>
