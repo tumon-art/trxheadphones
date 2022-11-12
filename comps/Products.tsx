@@ -45,16 +45,18 @@ const Products = ({ products, gap }: ProductsProps) => {
      transition my-5 `}
     >
       <div
-        className=" cursor-pointer shadow-sm shadow-lightDim overflow-hidden
-       rounded-md  bg-lightDim h-32 w-32 sm:h-40 sm:w-40 lg:h-56 lg:w-56"
+      //   className=" cursor-pointer shadow-sm shadow-lightDim overflow-hidden
+      //  rounded-md  bg-lightDim h-32 w-32 sm:h-40 sm:w-40 lg:h-56 lg:w-56"
       >
         {/* === IMAGE */}
         <Link href={`/product/${products.slug.current}`}>
           <Img
-            className=" object-cover"
+            className="cursor-pointer shadow-sm shadow-lightDim overflow-hidden
+            rounded-md  bg-lightDim h-32 w-32 sm:h-40 sm:w-40 lg:h-56 lg:w-56 block object-cover"
             alt="headphone"
             {...imageProps}
-            layout="responsive"
+            height="128"
+            width="128"
           />
         </Link>
       </div>

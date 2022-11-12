@@ -38,11 +38,7 @@ export default function index({
   products: ProductsTypes[];
   bannerData: BannerDataTypes[];
 }) {
-  return (
-    <>
-      <Home products={products} bannerData={bannerData} />
-    </>
-  );
+  return <>{/* <Home products={products} bannerData={bannerData} /> */}</>;
 }
 
 export const getServerSideProps = async () => {
