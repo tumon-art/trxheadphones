@@ -23,7 +23,7 @@ const MainBanner = ({ banner }) => {
           <h1
             className="drop-shadow-lg md:text-7xl text-5xl font-sans 
             animate-pulse pt-3
-            font-extrabold text-zinc-50"
+            font-extrabold text-highLight"
           >
             {/* {banner.largeText1} */}
             NOW!
@@ -44,7 +44,7 @@ const MainBanner = ({ banner }) => {
           <Img className="  transition" {...imageProps} layout="responsive" />
           <div
             className=" absolute bottom-10 blur-md left-0 right-0 mx-auto
-           bg-black blur-1xl h-4 rounded-full opacity-20 w-32"
+            text-fullBlack blur-1xl h-4 rounded-full opacity-20 w-32"
           ></div>
         </motion.div>
 
@@ -53,17 +53,17 @@ const MainBanner = ({ banner }) => {
             className=" mt-4 sm:mt-6 md:mt-4 lg:mt-10 text-center
            shadow-lg font-extrabold shadow-dim
            transition duration-1000
-           w-32 bg-primary text-white px-4 rounded-lg py-1"
+           w-32 bg-primary text-highLight px-4 rounded-lg py-1"
           >
             {banner.buttonText}
           </button>
         </Link>
 
         <div className=" absolute right-10 bottom-10">
-          <h4 className="hidden lg:block text-cyan-900 text-md font-extrabold">
+          <h4 className="hidden lg:block text-secondary text-md font-extrabold">
             Description
           </h4>
-          <h4 className="hidden lg:block text-zinc-500">{banner.desc}</h4>
+          <h4 className="hidden lg:block text-lightGray">{banner.desc}</h4>
         </div>
       </section>
     </main>

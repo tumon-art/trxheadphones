@@ -8,15 +8,17 @@ const FooterBanner = ({ bannerData }) => {
 
   return (
     <main
-      className=" ring-8 ring-green-500 shadow-2xl shadow-green-300
+      className=" ring-8 ring-primary shadow-2xl shadow-dim
      md:mx-20 md:rounded-3xl md:h-64 md:mb-8 relative bg-gradient-to-r from-green-700
-     h-60 lg:h-[340px] pl-4 my-10 bg-green-500 md:px-10 "
+     h-60 lg:h-[340px] pl-4 my-10 bg-primary md:px-10 "
     >
       <section className="flex flex-col">
         <div className="mt-10 lg:mt-20">
-          <p className=" font-bold text-lg text-white">{bannerData.discount}</p>
+          <p className=" font-bold text-lg text-highLight">
+            {bannerData.discount}
+          </p>
           <h3
-            className="drop-shadow-lg text-white
+            className="drop-shadow-lg text-highLight
           md:text-4xl text-2xl font-sans font-extrabold"
           >
             {bannerData.midText}
@@ -24,7 +26,7 @@ const FooterBanner = ({ bannerData }) => {
 
           <h1
             className="drop-shadow-lg md:text-7xl text-5xl font-sans 
-            animate-pulse pt-3 font-extrabold text-zinc-50"
+            animate-pulse pt-3 font-extrabold text-highLight"
           >
             {/* {banner.largeText1} */}
             NOW!
@@ -41,7 +43,7 @@ const FooterBanner = ({ bannerData }) => {
           <Img {...imageProps} layout="responsive" />
         </div>
 
-        <p className=" text-zinc-50 text-lg font- mt-4 hidden lg:block ml-2">
+        <p className=" text-highLight text-lg font- mt-4 hidden lg:block ml-2">
           {bannerData.saleTime}!
         </p>
 
@@ -50,7 +52,7 @@ const FooterBanner = ({ bannerData }) => {
             className=" lg:absolute lg:right-8 lg:bottom-10
             mt-4 sm:mt-6 md:mt-4 lg:mt-10 text-center
             font-extrabold hover:scale-110 transition
-            w-32 bg-zinc-50 text-green-600 px-4 rounded-lg py-1"
+            w-32 bg-highLight text-primary px-4 rounded-lg py-1"
           >
             {bannerData.buttonText}
           </button>
@@ -58,10 +60,9 @@ const FooterBanner = ({ bannerData }) => {
 
         <p
           className=" hidden md:block md:text-2xl md:top-20 text-center drop-shadow-xl
-         text-white font-extrabold lg:text-4xl font-sans absolute right-10 top-10"
+         text-highLight font-extrabold lg:text-4xl font-sans absolute right-10 top-10"
         >
-          STUNNING{" "}
-          <span className=" text-green-300 drop-shadow-lg"> SOUND </span>
+          STUNNING <span className=" text-dim drop-shadow-lg"> SOUND </span>
           <br></br> & <br></br> TOTAL COMFORT
         </p>
       </section>

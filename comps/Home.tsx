@@ -47,8 +47,7 @@ const Home = ({ products, bannerData }: HomeProps) => {
         <div> </div>
         <select
           className=" outline-none focus:ring-1
-       focus:ring-rose-800 
-      rounded-sm bg-zinc-200 text-zinc-700 text-xs "
+        focus:ring-rose-800 rounded-sm bg-lightDim1 text-zinc-700 text-xs"
           defaultValue=""
           onChange={selectHandle}
         >
@@ -61,11 +60,11 @@ const Home = ({ products, bannerData }: HomeProps) => {
       </div>
 
       <section className="  mb-4 flex items-center flex-col">
-        <h1 className=" sm:text-4xl text-2xl text-cyan-900 font-sans font-extrabold">
+        <h1 className=" sm:text-4xl text-2xl text-secondary font-sans font-extrabold">
           Best Selling Headphones
         </h1>
 
-        <p className=" text-base text-cyan-900">Best in the Market</p>
+        <p className=" text-base text-secondary">Best in the Market</p>
       </section>
 
       {/* === SHOW PRODUCTS  */}

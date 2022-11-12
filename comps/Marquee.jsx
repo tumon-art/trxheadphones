@@ -1,24 +1,22 @@
-import styles from '../styles/Marquee.module.css'
-import Products from './Products'
+import styles from "../styles/Marquee.module.css";
+import Products from "./Products";
 
-const Marquee = ({products}) => {
-
+const Marquee = ({ products }) => {
   return (
-   <div className=' mt-20'>
+    <div className=" mt-20">
+      <h1 className=" text-center text-secondary text-xl font-extrabold">
+        You may also like
+      </h1>
 
-     <h1 className=' text-center text-sky-900 text-xl font-extrabold'>
-       You may also like 
-     </h1>
+      <section className=" mt-10 relative h-52 sm:h-96  w-full  overflow-hidden">
+        <div className={` ${styles.anim} flex  justify-center`}>
+          {products.map((product) => (
+            <Products gap={"mr-5"} key={product._id} products={product} />
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+};
 
-
-     <section className=' mt-10 relative h-52 sm:h-96  w-full  overflow-hidden'>
-       <div className={` ${styles.anim} flex  justify-center` } >
-         {products.map((product)=><Products gap={'mr-5'} key={product._id} products={product} />)}
-       </div>
-     </section>
-
-   </div>
-  )
-}
-
-export default Marquee
+export default Marquee;

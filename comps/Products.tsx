@@ -45,8 +45,8 @@ const Products = ({ products, gap }: ProductsProps) => {
      transition my-5 `}
     >
       <div
-        className=" cursor-pointer shadow-sm shadow-gray-300 overflow-hidden
-       rounded-md  bg-gray-300 h-32 w-32 sm:h-40 sm:w-40 lg:h-56 lg:w-56"
+        className=" cursor-pointer shadow-sm shadow-lightDim overflow-hidden
+       rounded-md  bg-lightDim h-32 w-32 sm:h-40 sm:w-40 lg:h-56 lg:w-56"
       >
         {/* === IMAGE */}
         <Link href={`/product/${products.slug.current}`}>
@@ -78,10 +78,10 @@ const Products = ({ products, gap }: ProductsProps) => {
             JSON.parse(localStorage.trxfav).filter(
               (each) => each._id == products._id
             ).length >= 1 &&
-            "fill-red-600"
+            " fill-love"
           }
-          h-6 sm:h-10 self-start hover:text-rose-300 sm:hover:fill-red-600 transition-colors
-          duration-1000 text-zinc-200 z-10`}
+          h-6 sm:h-10 self-start hover:bg-lightLove sm:hover:fill-love transition-colors
+          duration-1000 text-lightDim1 z-10`}
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"

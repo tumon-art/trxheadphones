@@ -10,10 +10,10 @@ const Navbar = () => {
   const notify = () => toast.error("Not Ready Yet!");
 
   return (
-    <div className=" border-zinc-500 mt-1 px-1 sm:my-1  md:mx-4 flex justify-between">
+    <div className=" mt-1 px-1 sm:my-1  md:mx-4 flex justify-between">
       <h3 className=" self-end">
         <Link href="/">
-          <div className=" flex items-end font-mono text-zinc-700 font-bold ">
+          <div className=" flex items-end font-mono text-lightGray font-bold ">
             TRX Headphones
             <svg
               className=" h-6 ml-1 w-auto"
@@ -35,14 +35,13 @@ const Navbar = () => {
       <div className="flex gap-4">
         <svg
           onClick={notify}
-          className="h-6 w-6 text-zinc-600
-           hover:text-green-600 cursor-pointer transition-colors"
+          className="h-6 w-6 text-lightGray
+           hover:text-primary cursor-pointer transition-colors"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
           strokeWidth={2}
         >
-          {" "}
           <title> Demo </title>
           <path
             strokeLinecap="round"
@@ -54,8 +53,8 @@ const Navbar = () => {
         <Toaster />
         <svg
           onClick={notify}
-          className="h-6 w-6 text-zinc-600
-           hover:text-green-600 cursor-pointer transition-colors"
+          className="h-6 w-6 text-lightGray
+           hover:text-primary cursor-pointer transition-colors"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -75,8 +74,8 @@ const Navbar = () => {
           onClick={() => setshowCart(true)}
         >
           <svg
-            className="h-6 w-6 text-gray-600 
-            hover:text-green-600 transition-colors"
+            className="h-6 w-6 text-lightGray
+            hover:text-primary transition-colors"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -91,7 +90,7 @@ const Navbar = () => {
             />
           </svg>
           <span
-            className=" bg-green-800 rounded-full absolute  text-white h-4 w-4 text-[10px]
+            className=" bg-primary rounded-full absolute  text-highLight h-4 w-4 text-[10px]
         font-semibold font-mono grid items-center left-[-6px] "
           >
             {totalQuantities}

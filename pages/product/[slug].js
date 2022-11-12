@@ -7,17 +7,14 @@ import {
 } from "react-icons/ai";
 import Marquee from "../../comps/Marquee";
 import { client, urlFor } from "../../lib/client";
-import { useNextSanityImage } from "next-sanity-image";
 import { UC } from "../../context/UC";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const ProductDetails = ({ product, products }) => {
   const { incQty, decQty, qty, onAdd } = useContext(UC);
-
   // USE STATES
   const [photoIndex, setphotoIndex] = useState(0);
-
-  const imageProps = useNextSanityImage(client, product.image[photoIndex]);
 
   return (
     <div className=" sm:px-10 py-10">
@@ -31,21 +28,20 @@ const ProductDetails = ({ product, products }) => {
                 opacity: 1,
               }}
               className=" object-cover
-                        hover:bg-green-500 transition duration-300
-                        h-64 w-64 lg:h-96 lg:w-96
-                          
-                        bg-zinc-300 sm:rounded-2xl"
+              hover:bg-primary transition duration-300
+              h-64 w-64 lg:h-96 lg:w-96 bg-lightDim1 sm:rounded-2xl"
               src={urlFor(product.image && product.image[photoIndex])}
             />
+
             {/* === MORE IMAGES */}
             <div className="flex ml-2 sm:ml-0">
               {product.image.map((e, i) => (
                 <img
                   key={i}
                   src={urlFor(e)}
-                  className="h-14 bg-zinc-300 mt-4 mr-4 
-                                    transition duration-200
-                                    hover:bg-green-600 rounded-xl w-auto"
+                  className="h-14 bg-lightDim1 mt-4 mr-4 
+                  transition duration-200
+                  hover:bg-primary rounded-xl w-auto"
                   onMouseOver={() => setphotoIndex(i)}
                 />
               ))}
@@ -54,11 +50,11 @@ const ProductDetails = ({ product, products }) => {
 
           <section
             name="details"
-            className=" mt-10 sm:mt-0 text-green-600 sm:ml-10"
+            className=" mt-10 sm:mt-0 text-primary sm:ml-10"
           >
             <div className=" ml-2">
               {/* === PRODUCT DETAILS & REVIEWS */}
-              <h1 className=" text-sky-900 text-xl font-semibold">
+              <h1 className=" text-secondary text-xl font-semibold">
                 {" "}
                 {product.model}{" "}
               </h1>
@@ -68,36 +64,36 @@ const ProductDetails = ({ product, products }) => {
                 <AiFillStar />
                 <AiFillStar />
                 <AiOutlineStar />
-                <span className=" text-zinc-500 text-sm mx-1"> (9) </span>
+                <span className=" text-lightGray text-sm mx-1"> (9) </span>
               </div>
 
-              <div className=" text-sky-900 font-medium ">DETAILS:</div>
-              <p className="w-2/3 text-zinc-600"> {product.details}</p>
+              <div className=" text-secondary font-medium ">DETAILS:</div>
+              <p className="w-2/3 text-lightGray"> {product.details}</p>
 
               <div className=" my-4 text-2xl font-bold"> ${product.price} </div>
 
               {/* ==== QUANTITY SHOW  */}
               <div className="flex">
-                <h3 className="text-sky-900 font-semibold"> Quantity:</h3>
+                <h3 className="text-secondary font-semibold"> Quantity:</h3>
 
                 <div
-                  className=" w-40 ring-gray-400 
-                                    flex justify-center items-center ring-1 ml-4 px-4"
+                  className=" w-40 ring-lightGray
+                  flex justify-center items-center ring-1 ml-4 px-4"
                 >
                   <span
-                    className="hover:scale-150 text-red-600 transition mx-2"
+                    className="hover:scale-150 text-love transition mx-2"
                     onClick={() => decQty()}
                   >
                     <AiOutlineMinus />
                   </span>
                   <p
-                    className=" font-medium text-gray-800
-                                       mx-2 border-r-2 border-gray-400 my-1 border-l-2 px-4"
+                    className=" font-medium text-secondary
+                    mx-2 border-r-2 border-lightDim my-1 border-l-2 px-4"
                   >
                     {qty}
                   </p>
                   <span
-                    className=" hover:scale-150 transition text-green-700 mx-2 "
+                    className=" hover:scale-150 transition text-primary mx-2 "
                     onClick={() => incQty()}
                   >
                     <AiOutlinePlus />
@@ -109,8 +105,9 @@ const ProductDetails = ({ product, products }) => {
             {/* ==== ADD AND BUY */}
             <div className=" sm:flex w-full gap-4 mt-8 px-1">
               <button
-                className=" flex justify-center items-center mb-4 sm:mb-0 hover:scale-105 transition
-                             text-xl px-8 py-2 ring-1 ring-green-600 w-full sm:w-auto "
+                className=" flex justify-center items-center mb-4 
+                sm:mb-0 hover:scale-105 transition
+                text-xl px-8 py-2 ring-1 ring-primary w-full sm:w-auto "
                 onClick={() => onAdd(product, qty)}
               >
                 Add to Cart
@@ -118,7 +115,7 @@ const ProductDetails = ({ product, products }) => {
 
               <div
                 className=" text-center hover:scale-105 transition shadow-md
-                            bg-green-600 text-xl px-8 py-2  text-white ring-1 ring-green-600"
+                 bg-primary text-xl px-8 py-2  text-highLight ring-1 ring-primary"
               >
                 Buy Now
               </div>
