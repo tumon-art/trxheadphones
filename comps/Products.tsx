@@ -2,7 +2,6 @@ import Link from "next/link";
 import { client } from "../lib/client";
 import Img from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
-import { useState } from "react";
 import { ProductsTypes } from "../pages";
 
 interface ProductsProps {
@@ -11,19 +10,17 @@ interface ProductsProps {
 }
 
 const Products = ({ products, gap }: ProductsProps) => {
-  const [updata, setupdata] = useState(false);
-
   const imageProps = useNextSanityImage(client, products.image[0]);
 
   const saveToLocalS = (product: ProductsTypes) => {
     if (localStorage.trxfav) {
       if (
         JSON.parse(localStorage.trxfav).filter(
-          (each) => each._id == product._id
+          (each: ProductsTypes) => each._id == product._id
         ).length >= 1
       ) {
         const filterd = JSON.parse(localStorage.trxfav).filter(
-          (each) => each._id != product._id
+          (each: ProductsTypes) => each._id != product._id
         );
         localStorage.setItem("trxfav", JSON.stringify(filterd));
       } else {
@@ -35,9 +32,9 @@ const Products = ({ products, gap }: ProductsProps) => {
     } else {
       localStorage.setItem("trxfav", JSON.stringify([product]));
     }
-
-    console.log(JSON.parse(localStorage.trxfav));
   };
+
+  if (typeof localStorage == "undefined") return null;
 
   return (
     <div
@@ -45,19 +42,12 @@ const Products = ({ products, gap }: ProductsProps) => {
      transition my-5 `}
     >
       <div
-      //   className=" cursor-pointer shadow-sm shadow-lightDim overflow-hidden
-      //  rounded-md  bg-lightDim h-32 w-32 sm:h-40 sm:w-40 lg:h-56 lg:w-56"
+        className="cursor-pointer shadow-sm shadow-lightDim overflow-hidden
+            rounded-md  bg-lightDim h-32 w-32 sm:h-40 sm:w-40 lg:h-56 lg:w-56"
       >
         {/* === IMAGE */}
         <Link href={`/product/${products.slug.current}`}>
-          <Img
-            className="cursor-pointer shadow-sm shadow-lightDim overflow-hidden
-            rounded-md  bg-lightDim h-32 w-32 sm:h-40 sm:w-40 lg:h-56 lg:w-56 block object-cover"
-            alt="headphone"
-            {...imageProps}
-            height="128"
-            width="128"
-          />
+          <Img className="object-cover" alt="headphone" {...imageProps} />
         </Link>
       </div>
 
@@ -72,18 +62,14 @@ const Products = ({ products, gap }: ProductsProps) => {
         <svg
           onClick={() => {
             saveToLocalS(products);
-            setupdata((p) => !p);
           }}
-          className={` 
-          ${
-            global.localStorage?.trxfav &&
+          className={`h-6 sm:h-10 self-start hover:bg-lightLove
+          sm:hover:fill-love transition-colors
+          duration-1000 text-lightDim1 z-10 ${
             JSON.parse(localStorage.trxfav).filter(
-              (each) => each._id == products._id
-            ).length >= 1 &&
-            " fill-love"
-          }
-          h-6 sm:h-10 self-start hover:bg-lightLove sm:hover:fill-love transition-colors
-          duration-1000 text-lightDim1 z-10`}
+              (each: ProductsTypes) => each._id == products._id
+            ).length >= 1 && "fill-love"
+          }`}
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
