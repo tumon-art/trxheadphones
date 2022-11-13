@@ -84,6 +84,7 @@ export const Provider = ({ children }) => {
     }
     setcartItems(newCartItems);
   };
+  console.log("context");
 
   return (
     <UC.Provider

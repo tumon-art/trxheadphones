@@ -13,6 +13,9 @@ interface ProductsProps {
 const Products = ({ products, gap }: ProductsProps) => {
   const [isLoaded, setIsloaded] = useState<boolean>(false);
 
+  //  UPDATE THE COMP TO SHOW FAV
+  const [update, setUpdate] = useState<boolean>(false);
+
   const imageProps = useNextSanityImage(client, products.image[0]);
 
   useEffect(() => {
@@ -40,7 +43,6 @@ const Products = ({ products, gap }: ProductsProps) => {
     }
   };
 
-  if (isLoaded == false) return;
   return (
     <div
       className={` ${gap} grid justify-center hover:scale-105
@@ -64,32 +66,35 @@ const Products = ({ products, gap }: ProductsProps) => {
         </nav>
 
         {/* === FAV ICON */}
-        <svg
-          onClick={() => {
-            saveToLocalS(products);
-          }}
-          className={`h-6 sm:h-10 self-start hover:bg-lightLove
+        {isLoaded && (
+          <svg
+            onClick={() => {
+              saveToLocalS(products);
+              setUpdate((p) => !p);
+            }}
+            className={`h-6 sm:h-10 self-start hover:bg-lightLove
           sm:hover:fill-love transition-colors
           duration-1000 text-lightDim1 z-10 ${
-            window.localStorage.fav &&
+            global.localStorage.trxfav &&
             JSON.parse(localStorage.trxfav).filter(
               (each: ProductsTypes) => each._id == products._id
             ).length >= 1 &&
             "fill-love"
           }`}
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth={2}
-        >
-          <title> Add To Favorite</title>
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <title> Add To Favorite</title>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5
           4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-          />
-        </svg>
+            />
+          </svg>
+        )}
       </section>
     </div>
   );
