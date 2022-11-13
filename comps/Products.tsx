@@ -3,6 +3,7 @@ import { client } from "../lib/client";
 import Img from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
 import { ProductsTypes } from "../pages";
+import { useEffect, useState } from "react";
 
 interface ProductsProps {
   products: ProductsTypes;
@@ -10,8 +11,13 @@ interface ProductsProps {
 }
 
 const Products = ({ products, gap }: ProductsProps) => {
+  const [isLoaded, setIsloaded] = useState<boolean>(false);
+
   const imageProps = useNextSanityImage(client, products.image[0]);
 
+  useEffect(() => {
+    setIsloaded(true);
+  }, []);
   const saveToLocalS = (product: ProductsTypes) => {
     if (localStorage.trxfav) {
       if (
@@ -34,8 +40,7 @@ const Products = ({ products, gap }: ProductsProps) => {
     }
   };
 
-  if (typeof localStorage == "undefined") return null;
-
+  if (isLoaded == false) return;
   return (
     <div
       className={` ${gap} grid justify-center hover:scale-105
