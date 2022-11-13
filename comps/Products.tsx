@@ -71,9 +71,11 @@ const Products = ({ products, gap }: ProductsProps) => {
           className={`h-6 sm:h-10 self-start hover:bg-lightLove
           sm:hover:fill-love transition-colors
           duration-1000 text-lightDim1 z-10 ${
+            window.localStorage.fav &&
             JSON.parse(localStorage.trxfav).filter(
               (each: ProductsTypes) => each._id == products._id
-            ).length >= 1 && "fill-love"
+            ).length >= 1 &&
+            "fill-love"
           }`}
           viewBox="0 0 24 24"
           fill="none"
