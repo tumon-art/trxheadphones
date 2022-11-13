@@ -31,28 +31,30 @@ export interface BannerDataTypes {
   product: string;
   saleTime: string;
 }
-export default function index({
-  products,
-  bannerData,
-}: {
-  products: ProductsTypes[];
-  bannerData: BannerDataTypes[];
-}) {
+
+async function getData() {
+  const res = await fetch("https://api.example.com/...");
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
+
+  const query = '*[_type == "product"]';
+  const products: ProductsTypes[] = await client.fetch(query);
+
+  const bannerQuery = '*[_type == "banner"]';
+  const bannerData: BannerDataTypes[] = await client.fetch(bannerQuery);
+
+  return {
+    products,
+    bannerData,
+  };
+}
+
+export default async function Page() {
+  const { products, bannerData } = await getData();
+
   return (
     <>
       <Home products={products} bannerData={bannerData} />
     </>
   );
 }
-
-export const getServerSideProps = async () => {
-  const query = '*[_type == "product"]';
-  const products = await client.fetch(query);
-
-  const bannerQuery = '*[_type == "banner"]';
-  const bannerData = await client.fetch(bannerQuery);
-
-  return {
-    props: { products, bannerData },
-  };
-};

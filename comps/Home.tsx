@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BannerDataTypes, ProductsTypes } from "../pages";
+import { BannerDataTypes, ProductsTypes } from "../app/page";
 import FooterBanner from "./FooterBanner";
 import MainBanner from "./MainBanner";
 import Products from "./Products";
