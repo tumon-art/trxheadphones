@@ -26,3 +26,18 @@ export default async function SingleProduct({ params: { slug } }: PageProps) {
 
   return <Show product={product} products={products} />;
 }
+
+export const generateStaticParams = async () => {
+  const query = `*[_type == "product"] {
+        slug {
+            current
+        }
+    }
+    `;
+
+  const products = await client.fetch(query);
+
+  return products.map((e) => ({
+    slug: e.slug.current,
+  }));
+};
