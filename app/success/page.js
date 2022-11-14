@@ -21,7 +21,7 @@ const Success = () => {
     <div className=" my-10 flex justify-center items-center">
       <div className=" sm:m-10 my-10 bg-gray-300 sm:rounded-xl py-10 sm:px-10">
         <p className=" text-green-600 text-4xl flex justify-center">
-          <AiOutlineFileDone />
+          {/* <AiOutlineFileDone /> */}
         </p>
         <h2 className=" text-sky-900 font-extrabold text-xl sm:text-5xl text-center my-4">
           Thank you for your order!

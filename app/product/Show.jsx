@@ -60,11 +60,11 @@ const Show = ({ product, products }) => {
                 {product.model}{" "}
               </h1>
               <div className="flex my-2">
+                {/* <AiFillStar />
                 <AiFillStar />
                 <AiFillStar />
                 <AiFillStar />
-                <AiFillStar />
-                <AiOutlineStar />
+                <AiOutlineStar /> */}
                 <span className=" text-lightGray text-sm mx-1"> (9) </span>
               </div>
 
@@ -85,7 +85,7 @@ const Show = ({ product, products }) => {
                     className="hover:scale-150 text-love transition mx-2"
                     onClick={() => decQty()}
                   >
-                    <AiOutlineMinus />
+                    {/* <AiOutlineMinus /> */}
                   </span>
                   <p
                     className=" font-medium text-secondary
@@ -97,7 +97,7 @@ const Show = ({ product, products }) => {
                     className=" hover:scale-150 transition text-primary mx-2 "
                     onClick={() => incQty()}
                   >
-                    <AiOutlinePlus />
+                    {/* <AiOutlinePlus /> */}
                   </span>
                 </div>
               </div>

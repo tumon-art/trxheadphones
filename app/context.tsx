@@ -59,7 +59,7 @@ export const Provider = ({ children }) => {
   };
 
   // UPDATE SINGLE PRODUCT FOR TOGGLE CART
-  const toggleCartItemQuantity = (id, value) => {
+  const toggleCartItemQuantity = (id, value: string) => {
     // value takes "inc" | "dec"
     const foundProduct = cartItems.find((item) => item._id === id);
     const index = cartItems.findIndex((item) => item._id === id);
