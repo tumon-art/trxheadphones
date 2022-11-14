@@ -51,7 +51,7 @@ const MainBanner = ({ banner }: { banner: BannerDataTypes }) => {
           />
           <div
             className=" absolute bottom-10 blur-md left-0 right-0 mx-auto
-            text-fullBlack blur-1xl h-4 rounded-full opacity-20 w-32"
+             bg-fullBlack blur-1xl h-4 opacity-20 rounded-full w-32"
           ></div>
         </motion.div>
 
