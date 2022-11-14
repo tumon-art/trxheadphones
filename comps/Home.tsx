@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import { BannerDataTypes, ProductsTypes } from "../app/page";
-import FooterBanner from "./FooterBanner";
-import MainBanner from "./MainBanner";
+import FooterBanner from "../app/FooterBanner";
+import MainBanner from "../app/MainBanner";
 import Products from "./Products";
 
 interface HomeProps {

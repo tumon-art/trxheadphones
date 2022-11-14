@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import { Provider } from "./context";
+import Footer from "./Footer";
 import Navbar from "../comps/Navbar";
 interface Props {
   children: React.ReactNode;
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: Props) {
         <Provider>
           <Navbar />
           {children}
+          <Footer />
         </Provider>
       </body>
     </html>
