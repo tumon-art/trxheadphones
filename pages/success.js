@@ -1,13 +1,13 @@
-import React, {  useContext, useEffect } from 'react';
-import Link from 'next/link';
-import { BsBagCheckFill } from 'react-icons/bs';
+import React, { useContext, useEffect } from "react";
+import Link from "next/link";
+import { BsBagCheckFill } from "react-icons/bs";
 
-import { runFireworks } from '../lib/utils';
-import { UC } from '../context/UC';
+import { runFireworks } from "../lib/utils";
+import { UC } from "../app/context";
 
 const Success = () => {
-  const { setcartItems, settotalPrice, settotalQuantities } = useContext(UC)
-  
+  const { setcartItems, settotalPrice, settotalQuantities } = useContext(UC);
+
   useEffect(() => {
     localStorage.clear();
     setcartItems([]);
@@ -22,29 +22,35 @@ const Success = () => {
         <p className=" text-green-600 text-4xl flex justify-center">
           <BsBagCheckFill />
         </p>
-        <h2 className=' text-sky-900 font-extrabold text-xl sm:text-5xl text-center my-4' >Thank you for your order!</h2>
-        <p className=" text-center font-bold text-sm my-4">Check your email inbox for the receipt.</p>
+        <h2 className=" text-sky-900 font-extrabold text-xl sm:text-5xl text-center my-4">
+          Thank you for your order!
+        </h2>
+        <p className=" text-center font-bold text-sm my-4">
+          Check your email inbox for the receipt.
+        </p>
         <p className="  text-sm text-center">
           If you have any questions, please email
           <a className="text-red-600 mx-2" href="mailto:order@example.com">
             order@example.com
           </a>
         </p>
-        
-        <div className=' text-center '>
-        <Link href="/">
-          <button type="button" width="300px" 
-          className=" mt-10 bg-red-700 px-10 py-1 rounded-xl text-white
-           hover:scale-110 transition
-          ">
-            Continue Shopping
-          </button>
-        </Link>
-        </div>
 
+        <div className=" text-center ">
+          <Link href="/">
+            <button
+              type="button"
+              width="300px"
+              className=" mt-10 bg-red-700 px-10 py-1 rounded-xl text-white
+           hover:scale-110 transition
+          "
+            >
+              Continue Shopping
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Success
+export default Success;
