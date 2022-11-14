@@ -1,7 +1,8 @@
+"use client";
 import React, { createContext, useState } from "react";
-import { toast } from "react-hot-toast";
+import { toast, Toaster } from "react-hot-toast";
 
-export const UC = createContext();
+export const UC = createContext<any>(null);
 
 export const Provider = ({ children }) => {
   const [showCart, setshowCart] = useState(false);
@@ -84,7 +85,6 @@ export const Provider = ({ children }) => {
     }
     setcartItems(newCartItems);
   };
-  console.log("context");
 
   return (
     <UC.Provider
@@ -105,6 +105,7 @@ export const Provider = ({ children }) => {
         onRemove,
       }}
     >
+      <Toaster />
       {children}
     </UC.Provider>
   );

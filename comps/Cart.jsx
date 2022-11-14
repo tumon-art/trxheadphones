@@ -1,3 +1,4 @@
+"use client";
 import React, { useContext, useRef } from "react";
 import {
   AiOutlineMinus,
@@ -8,10 +9,10 @@ import {
 } from "react-icons/ai";
 
 import toast from "react-hot-toast";
-import { UC } from "../context/UC";
 
 import getStripe from "../lib/getStripe";
 import { urlFor } from "../lib/client";
+import { UC } from "../app/context";
 
 const Cart = () => {
   // USE REF

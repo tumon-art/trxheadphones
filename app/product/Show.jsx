@@ -1,3 +1,4 @@
+"use client";
 import React, { useContext, useState } from "react";
 import {
   AiFillStar,
@@ -6,12 +7,11 @@ import {
   AiOutlineStar,
 } from "react-icons/ai";
 import Marquee from "../../comps/Marquee";
-import { client, urlFor } from "../../lib/client";
-import { UC } from "../../context/UC";
+import { urlFor } from "../../lib/client";
+import { UC } from "../context";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
-const ProductDetails = ({ product, products }) => {
+const Show = ({ product, products }) => {
   const { incQty, decQty, qty, onAdd } = useContext(UC);
   // USE STATES
   const [photoIndex, setphotoIndex] = useState(0);
@@ -21,7 +21,7 @@ const ProductDetails = ({ product, products }) => {
       <div>
         <div className=" sm:flex">
           {/* === IMAGE  */}
-          <section name="image" className=" grid sm:block justify-center ">
+          <section className=" grid sm:block justify-center ">
             <motion.img
               initial={{ opacity: 0 }}
               animate={{
@@ -38,6 +38,7 @@ const ProductDetails = ({ product, products }) => {
               {product.image.map((e, i) => (
                 <img
                   key={i}
+                  alt="img"
                   src={urlFor(e)}
                   className="h-14 bg-lightDim1 mt-4 mr-4 
                   transition duration-200
@@ -129,44 +130,4 @@ const ProductDetails = ({ product, products }) => {
   );
 };
 
-export const getStaticPaths = async () => {
-  const query = `*[_type == "product"] {
-        slug {
-            current
-        }
-    }
-    `;
-
-  const products = await client.fetch(query);
-
-  const paths = products.map((e) => {
-    return {
-      params: {
-        slug: e.slug.current,
-      },
-    };
-  });
-
-  return {
-    paths,
-    fallback: "blocking",
-  };
-};
-
-export const getStaticProps = async ({ params }) => {
-  // QUERY
-  const oneProduct = `*[_type == "product" && slug.current == '${params.slug}'][0]`;
-  const productsQuery = '*[_type == "product"]';
-
-  // GET SINGLE PRODUCT
-  const product = await client.fetch(oneProduct);
-
-  // GET RELATED PRODUCTS
-  const products = await client.fetch(productsQuery);
-
-  return {
-    props: { product, products },
-  };
-};
-
-export default ProductDetails;
+export default Show;
