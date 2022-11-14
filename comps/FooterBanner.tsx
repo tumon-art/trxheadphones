@@ -2,8 +2,9 @@ import Link from "next/link";
 import Img from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
 import { client } from "../lib/client";
+import { BannerDataTypes } from "../app/page";
 
-const FooterBanner = ({ bannerData }) => {
+const FooterBanner = ({ bannerData }: { bannerData: BannerDataTypes }) => {
   const imageProps = useNextSanityImage(client, bannerData.image);
 
   return (
@@ -40,7 +41,7 @@ const FooterBanner = ({ bannerData }) => {
         hover:scale-110 lg:top-[-58px] sm:w-60
         self-end z-10 lg:self-center transition"
         >
-          <Img {...imageProps} layout="responsive" />
+          <Img alt="img" {...imageProps} layout="responsive" />
         </div>
 
         <p className=" text-highLight text-lg font- mt-4 hidden lg:block ml-2">

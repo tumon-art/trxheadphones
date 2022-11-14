@@ -1,15 +1,16 @@
 "use client";
 import React, { createContext, useState } from "react";
 import { toast, Toaster } from "react-hot-toast";
+import { ProductsTypes } from "./page";
 
 export const UC = createContext<any>(null);
 
 export const Provider = ({ children }) => {
-  const [showCart, setshowCart] = useState(false);
+  const [showCart, setshowCart] = useState<boolean>(false);
   const [cartItems, setcartItems] = useState([]);
-  const [totalPrice, settotalPrice] = useState(0);
-  const [totalQuantities, settotalQuantities] = useState(0);
-  const [qty, setqty] = useState(1);
+  const [totalPrice, settotalPrice] = useState<number>(0);
+  const [totalQuantities, settotalQuantities] = useState<number>(0);
+  const [qty, setqty] = useState<number>(1);
 
   // INC QTY FUNC
   const incQty = () => setqty((p) => p + 1);
@@ -23,7 +24,7 @@ export const Provider = ({ children }) => {
   };
 
   // ADD TO CART
-  const onAdd = (product, quantity) => {
+  const onAdd = (product, quantity: number) => {
     const checkProductInCart = cartItems.find(
       (item) => item._id === product._id
     );
@@ -48,7 +49,7 @@ export const Provider = ({ children }) => {
   };
 
   // ON REMOVE FORM CART
-  const onRemove = (product) => {
+  const onRemove = (product: ProductsTypes) => {
     const foundProduct = cartItems.find((item) => product._id === item._id);
     const newCartItems = cartItems.filter((item) => item._id !== product._id);
 

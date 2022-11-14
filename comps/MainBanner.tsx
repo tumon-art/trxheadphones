@@ -1,10 +1,12 @@
+"use client";
 import Link from "next/link";
 import Img from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
 import { client } from "../lib/client";
 import { motion } from "framer-motion";
+import { BannerDataTypes } from "../app/page";
 
-const MainBanner = ({ banner }) => {
+const MainBanner = ({ banner }: { banner: BannerDataTypes }) => {
   const imageProps = useNextSanityImage(client, banner.image);
 
   return (
@@ -41,7 +43,12 @@ const MainBanner = ({ banner }) => {
           className="drop-shadow-2xl absolute w-48 sm:self-center
           lg:w-[340px] sm:w-60 self-end pt-10 sm:pt-0 lg:self-center"
         >
-          <Img className="  transition" {...imageProps} layout="responsive" />
+          <Img
+            alt="img"
+            className="  transition"
+            {...imageProps}
+            layout="responsive"
+          />
           <div
             className=" absolute bottom-10 blur-md left-0 right-0 mx-auto
             text-fullBlack blur-1xl h-4 rounded-full opacity-20 w-32"

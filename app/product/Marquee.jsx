@@ -1,5 +1,5 @@
-import styles from "../styles/Marquee.module.css";
-import Products from "./Products";
+import styles from "../../styles/Marquee.module.css";
+import Products from "../../comps/Products";
 
 const Marquee = ({ products }) => {
   return (

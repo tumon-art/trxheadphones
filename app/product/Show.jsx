@@ -6,7 +6,7 @@ import {
   AiOutlinePlus,
   AiOutlineStar,
 } from "react-icons/ai";
-import Marquee from "../../comps/Marquee";
+import Marquee from "./Marquee";
 import { client, urlFor } from "../../lib/client";
 import { UC } from "../context";
 import { motion } from "framer-motion";
