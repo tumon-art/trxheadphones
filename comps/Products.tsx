@@ -2,7 +2,7 @@ import Link from "next/link";
 import { client } from "../lib/client";
 import Img from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
-import { ProductsTypes } from "./page";
+import { ProductsTypes } from "../app/page";
 import { useEffect, useState } from "react";
 
 interface ProductsProps {

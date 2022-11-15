@@ -4,7 +4,7 @@ import Img from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
 import { client } from "../lib/client";
 import { motion } from "framer-motion";
-import { BannerDataTypes } from "./page";
+import { BannerDataTypes } from "../app/page";
 
 const MainBanner = ({ banner }: { banner: BannerDataTypes }) => {
   const imageProps = useNextSanityImage(client, banner.image);
