@@ -1,15 +1,11 @@
 "use client";
 import React, { useContext, useState } from "react";
-import {
-  AiFillStar,
-  AiOutlineMinus,
-  AiOutlinePlus,
-  AiOutlineStar,
-} from "react-icons/ai";
+
 import Marquee from "./Marquee";
-import { client, urlFor } from "../../lib/client";
+import { urlFor } from "../../lib/client";
 import { UC } from "../context";
 import { motion } from "framer-motion";
+import { Minus, Plus, Star } from "../../comps/Svg";
 
 const Show = ({ product, products }) => {
   const { incQty, decQty, qty, onAdd } = useContext(UC);
@@ -59,12 +55,13 @@ const Show = ({ product, products }) => {
                 {" "}
                 {product.model}{" "}
               </h1>
-              <div className="flex my-2">
-                {/* <AiFillStar />
-                <AiFillStar />
-                <AiFillStar />
-                <AiFillStar />
-                <AiOutlineStar /> */}
+              <div className=" flex my-2">
+                <Star styles=" h-5 w-5 fill-primary" />
+                <Star styles=" h-5 w-5 fill-primary" />
+                <Star styles=" h-5 w-5 fill-primary" />
+                <Star styles=" h-5 w-5 fill-primary" />
+                <Star styles=" h-5 w-5" />
+
                 <span className=" text-lightGray text-sm mx-1"> (9) </span>
               </div>
 
@@ -85,7 +82,7 @@ const Show = ({ product, products }) => {
                     className="hover:scale-150 text-love transition mx-2"
                     onClick={() => decQty()}
                   >
-                    {/* <AiOutlineMinus /> */}
+                    <Minus styles=" h-5 w-5" />
                   </span>
                   <p
                     className=" font-medium text-secondary
@@ -97,7 +94,7 @@ const Show = ({ product, products }) => {
                     className=" hover:scale-150 transition text-primary mx-2 "
                     onClick={() => incQty()}
                   >
-                    {/* <AiOutlinePlus /> */}
+                    <Plus styles=" h-5 w-5" />
                   </span>
                 </div>
               </div>

@@ -9,24 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@sanity/client": "^3.2.0",
+    "@sanity/cli": "^2.35.0",
+    "@sanity/client": "^3.4.1",
     "@sanity/image-url": "^1.0.1",
-    "@stripe/stripe-js": "^1.25.0",
-    "framer-motion": "^7.4.0",
+    "@stripe/stripe-js": "^1.44.1",
+    "framer-motion": "^7.6.6",
     "next": "13.0.3",
     "next-sanity-image": "^3.2.1",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
-    "react-hot-toast": "^2.2.0",
-    "stripe": "^8.209.0"
+    "react-hot-toast": "^2.4.0",
+    "stripe": "^8.222.0"
   },
   "devDependencies": {
+    "@types/node": "18.11.9",
     "@types/react": "18.0.25",
-    "autoprefixer": "^10.4.5",
+    "autoprefixer": "^10.4.13",
     "eslint": "8.14.0",
     "eslint-config-next": "13.0.3",
-    "postcss": "^8.4.13",
-    "tailwindcss": "^3.0.24",
+    "postcss": "^8.4.19",
+    "tailwindcss": "^3.2.4",
     "typescript": "4.8.4"
   },
   "main": "index.js",

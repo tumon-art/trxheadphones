@@ -15,7 +15,6 @@ const Footer = () => {
           stroke="#2c3e50"
           fill="none"
         >
-          {" "}
           <title> Demo </title>
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <rect x="4" y="4" width="16" height="16" rx="4" />
@@ -31,7 +30,6 @@ const Footer = () => {
           stroke="#2c3e50"
           fill="none"
         >
-          {" "}
           <title> Demo </title>
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
@@ -46,7 +44,6 @@ const Footer = () => {
           stroke="#2c3e50"
           fill="none"
         >
-          {" "}
           <title> Demo </title>
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
@@ -60,7 +57,6 @@ const Footer = () => {
           stroke="#2c3e50"
           fill="none"
         >
-          {" "}
           <title> Demo </title>
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path

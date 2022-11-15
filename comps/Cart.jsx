@@ -1,18 +1,12 @@
 "use client";
 import React, { useContext, useRef } from "react";
-import {
-  AiOutlineMinus,
-  AiOutlinePlus,
-  AiOutlineLeft,
-  AiOutlineShopping,
-  AiFillDelete,
-} from "react-icons/ai";
 
 import toast from "react-hot-toast";
 
 import getStripe from "../lib/getStripe";
 import { urlFor } from "../lib/client";
 import { UC } from "../app/context";
+import { ArrowLeft, Delete, Minus, Plus, ShoppingBag } from "./Svg";
 
 const Cart = () => {
   // USE REF
@@ -62,11 +56,8 @@ const Cart = () => {
           className=" fixed bg-primary h-10 flex items-center
          pl-1 sm:pl-4 w-full shadow-sm shadow-lightDim"
         >
-          <button
-            className="flex gap-2 items-center text-lg"
-            onClick={() => setshowCart(false)}
-          >
-            <AiOutlineLeft className="text-2xl text-highLight" />
+          <button className=" flex gap-4" onClick={() => setshowCart(false)}>
+            <ArrowLeft styles=" h-6 text-xl" />
             <span className="text-highLight"> Your Cart </span>
             <span className="text-highLight">
               (<b> {totalQuantities}</b> items)
@@ -79,7 +70,7 @@ const Cart = () => {
           {cartItems.length < 1 && (
             <section className="flex flex-col items-center my-8">
               {/* === SHOPING BAG ICON  */}
-              <AiOutlineShopping size={150} />
+              <ShoppingBag styles=" h-5 w-5" />
               <h3 className="mt-4 font-bold text-lg">
                 Your shopping bag is empty
               </h3>
@@ -126,7 +117,7 @@ const Cart = () => {
                         className="hover:scale-150 transition mx-2"
                         onClick={() => toggleCartItemQuantity(item._id, "dec")}
                       >
-                        <AiOutlineMinus />
+                        <Minus styles=" h-5 w-5" />
                       </span>
                       <p
                         className=" font-medium text-secondary
@@ -139,14 +130,20 @@ const Cart = () => {
                         className=" hover:scale-150 transition text-primary mx-2 "
                         onClick={() => toggleCartItemQuantity(item._id, "inc")}
                       >
-                        <AiOutlinePlus />
+                        <Plus styles=" h-5 w-5" />
                       </span>
                     </div>
-                    <AiFillDelete
-                      onClick={() => onRemove(item)}
-                      className="  text-love text-3xl hover:scale-110
-               cursor-pointer"
-                    />
+
+                    <span
+                      onClick={() => {
+                        onRemove(item);
+                      }}
+                    >
+                      <Delete
+                        styles=" h-5 w-5 text-love text-3xl hover:scale-110
+                      cursor-pointer"
+                      />
+                    </span>
                   </div>
                 </div>
               </div>
