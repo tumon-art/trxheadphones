@@ -8,6 +8,7 @@ specifiers:
   '@types/node': 18.11.9
   '@types/react': 18.0.25
   autoprefixer: ^10.4.13
+  canvas-confetti: ^1.6.0
   eslint: 8.14.0
   eslint-config-next: 13.0.3
   framer-motion: ^7.6.6
@@ -38,6 +39,7 @@ devDependencies:
   '@types/node': 18.11.9
   '@types/react': 18.0.25
   autoprefixer: 10.4.13_postcss@8.4.19
+  canvas-confetti: 1.6.0
   eslint: 8.14.0
   eslint-config-next: 13.0.3_aqnqvswsw4teowvrmgt4gad4de
   postcss: 8.4.19
@@ -636,6 +638,10 @@ packages:
 
   /caniuse-lite/1.0.30001431:
     resolution: {integrity: sha512-zBUoFU0ZcxpvSt9IU66dXVT/3ctO1cy4y9cscs1szkPlcWb6pasYM144GqrUygUbT+k7cmUCW61cvskjcv0enQ==}
+
+  /canvas-confetti/1.6.0:
+    resolution: {integrity: sha512-ej+w/m8Jzpv9Z7W7uJZer14Ke8P2ogsjg4ZMGIuq4iqUOqY2Jq8BNW42iGmNfRwREaaEfFIczLuZZiEVSYNHAA==}
+    dev: true
 
   /capture-stack-trace/1.0.2:
     resolution: {integrity: sha512-X/WM2UQs6VMHUtjUDnZTRI+i1crWteJySFzr9UpGoQa4WQffXVTTXuekjl7TjZRlcF2XfjgITT0HxZ9RnxeT0w==}
