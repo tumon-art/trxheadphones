@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 
 import getStripe from "../lib/getStripe";
 import { urlFor } from "../lib/client";
-import { UC } from "../app/context";
+import { UC } from "./context";
 import { ArrowLeft, Delete, Minus, Plus, ShoppingBag } from "./Svg";
 
 const Cart = () => {

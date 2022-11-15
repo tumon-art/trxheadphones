@@ -5,7 +5,7 @@ import Marquee from "./Marquee";
 import { urlFor } from "../../lib/client";
 import { UC } from "../context";
 import { motion } from "framer-motion";
-import { Minus, Plus, Star } from "../../comps/Svg";
+import { Minus, Plus, Star } from "../Svg";
 
 const Show = ({ product, products }) => {
   const { incQty, decQty, qty, onAdd } = useContext(UC);

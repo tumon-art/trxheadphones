@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useContext } from "react";
-import Cart from "./Cart";
+import Cart from "../app/Cart";
 import { UC } from "../app/context";
 import toast, { Toaster } from "react-hot-toast";
 

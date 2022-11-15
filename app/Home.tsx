@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { BannerDataTypes, ProductsTypes } from "../app/page";
+import { BannerDataTypes, ProductsTypes } from "./page";
 import FooterBanner from "./FooterBanner";
 import MainBanner from "./MainBanner";
 import Products from "./Products";

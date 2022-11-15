@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import { Provider } from "./context";
 import Footer from "./Footer";
-import Navbar from "../comps/Navbar";
+import Navbar from "./Navbar";
 interface Props {
   children: React.ReactNode;
 }

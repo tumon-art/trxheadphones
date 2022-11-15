@@ -1,4 +1,4 @@
-import Home from "../comps/Home";
+import Home from "./Home";
 
 import { client } from "../lib/client";
 

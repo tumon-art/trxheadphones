@@ -24,7 +24,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "comps/Cart.jsx",
+    "app/Cart.jsx",
     ".next/types/**/*.ts",
     "app/product/Show.jsx"
   ],
