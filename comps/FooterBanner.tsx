@@ -41,7 +41,7 @@ const FooterBanner = ({ bannerData }: { bannerData: BannerDataTypes }) => {
         hover:scale-110 lg:top-[-58px] sm:w-60
         self-end z-10 lg:self-center transition"
         >
-          <Img alt="img" {...imageProps} layout="responsive" />
+          <Img alt="img" {...imageProps} />
         </div>
 
         <p className=" text-highLight text-lg font- mt-4 hidden lg:block ml-2">

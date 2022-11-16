@@ -48,7 +48,7 @@ const Home = ({ products, bannerData }: HomeProps) => {
         <div> </div>
         <select
           className=" outline-none focus:ring-1
-        focus:ring-rose-800 rounded-sm bg-lightDim1 text-zinc-700 text-xs"
+        focus:ring-lightGray rounded-sm bg-lightDim1 text-lightGray text-xs"
           defaultValue=""
           onChange={selectHandle}
         >

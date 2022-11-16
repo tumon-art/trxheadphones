@@ -43,12 +43,7 @@ const MainBanner = ({ banner }: { banner: BannerDataTypes }) => {
           className="drop-shadow-2xl absolute w-48 sm:self-center
           lg:w-[340px] sm:w-60 self-end pt-10 sm:pt-0 lg:self-center"
         >
-          <Img
-            alt="img"
-            className="  transition"
-            {...imageProps}
-            layout="responsive"
-          />
+          <Img alt="img" className="  transition" {...imageProps} />
           <div
             className=" absolute bottom-10 blur-md left-0 right-0 mx-auto
              bg-fullBlack blur-1xl h-4 opacity-20 rounded-full w-32"

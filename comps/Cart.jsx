@@ -43,10 +43,11 @@ const Cart = () => {
   };
   return (
     <div
-      className="bg-lightGray bg-opacity-50 w-full h-full 
+      className=" bg-lightGray bg-opacity-50 w-full h-full 
       fixed z-50 right-0 top-0"
       ref={cartRef}
     >
+      <div></div>
       <div
         className=" relative overflow-y-auto  float-right 
         h-full transition-all duration-500
@@ -77,9 +78,8 @@ const Cart = () => {
 
               {/* === BUTTON  */}
               <button
-                className=" rounded-lg py-2 px-14
-           text-lg bg-primary text-highLight mt-8 
-            hover:scale-110 transition"
+                className=" rounded-lg py-2 px-14 text-lg bg-primary
+                 text-highLight mt-8 hover:scale-110 transition"
                 onClick={() => setshowCart(false)}
               >
                 Continue Shopping
