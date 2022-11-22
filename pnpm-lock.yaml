@@ -14,6 +14,7 @@ specifiers:
   framer-motion: ^7.6.6
   next: 13.0.3
   next-sanity-image: ^3.2.1
+  nextjs: ^0.0.3
   postcss: ^8.4.19
   react: 18.2.0
   react-dom: ^18.2.0
@@ -27,9 +28,11 @@ dependencies:
   '@sanity/client': 3.4.1
   '@sanity/image-url': 1.0.1
   '@stripe/stripe-js': 1.44.1
+  canvas-confetti: 1.6.0
   framer-motion: 7.6.6_biqbaboplfbrettd7655fr4n2y
   next: 13.0.3_biqbaboplfbrettd7655fr4n2y
   next-sanity-image: 3.2.1_22ojjkxc3ez7nyfbvjilzxqzuu
+  nextjs: 0.0.3
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-hot-toast: 2.4.0_biqbaboplfbrettd7655fr4n2y
@@ -39,7 +42,6 @@ devDependencies:
   '@types/node': 18.11.9
   '@types/react': 18.0.25
   autoprefixer: 10.4.13_postcss@8.4.19
-  canvas-confetti: 1.6.0
   eslint: 8.14.0
   eslint-config-next: 13.0.3_aqnqvswsw4teowvrmgt4gad4de
   postcss: 8.4.19
@@ -641,7 +643,7 @@ packages:
 
   /canvas-confetti/1.6.0:
     resolution: {integrity: sha512-ej+w/m8Jzpv9Z7W7uJZer14Ke8P2ogsjg4ZMGIuq4iqUOqY2Jq8BNW42iGmNfRwREaaEfFIczLuZZiEVSYNHAA==}
-    dev: true
+    dev: false
 
   /capture-stack-trace/1.0.2:
     resolution: {integrity: sha512-X/WM2UQs6VMHUtjUDnZTRI+i1crWteJySFzr9UpGoQa4WQffXVTTXuekjl7TjZRlcF2XfjgITT0HxZ9RnxeT0w==}
@@ -1807,6 +1809,11 @@ packages:
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
+    dev: false
+
+  /nextjs/0.0.3:
+    resolution: {integrity: sha512-mYbDUo4/sRAZ8TqK63PCpYnFiLg7BICG/ot9+guOrUKd4/Fo71ZmEQ41IZbH6nqbQvG7SXTBuofJXAIWfNho0w==}
+    engines: {node: '>=0.8.21'}
     dev: false
 
   /node-releases/2.0.6:
