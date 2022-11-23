@@ -1,13 +1,13 @@
 "use client";
 import React, { useContext, useState } from "react";
 
-import Marquee from "./Marquee";
+import Marquee from "../../comps/Marquee";
 import { urlFor } from "../../lib/client";
 import { UC } from "../context";
-import { motion } from "framer-motion";
 import { Minus, Plus, Star } from "../../comps/Svg";
 
 const Show = ({ product, products }) => {
+  console.log("show");
   const { incQty, decQty, qty, onAdd } = useContext(UC);
   // USE STATES
   const [photoIndex, setphotoIndex] = useState(0);
@@ -18,11 +18,7 @@ const Show = ({ product, products }) => {
         <div className=" sm:flex">
           {/* === IMAGE  */}
           <section className=" grid sm:block justify-center ">
-            <motion.img
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity: 1,
-              }}
+            <img
               className=" object-cover
               hover:bg-primary transition duration-300
               h-64 w-64 lg:h-96 lg:w-96 bg-lightDim1 sm:rounded-2xl"

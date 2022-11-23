@@ -1,7 +1,9 @@
-import styles from "../../styles/Marquee.module.css";
-import Products from "../../comps/Products";
+import styles from "../styles/Marquee.module.css";
+import Products from "./Products";
+import { memo } from "react";
 
 const Marquee = ({ products }) => {
+  console.log("marquee");
   return (
     <div className=" mt-20">
       <h1 className=" text-center text-secondary text-xl font-extrabold">
@@ -19,4 +21,4 @@ const Marquee = ({ products }) => {
   );
 };
 
-export default Marquee;
+export default memo(Marquee);

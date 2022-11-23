@@ -3,10 +3,10 @@ import Link from "next/link";
 import Img from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
 import { client } from "../lib/client";
-import { motion } from "framer-motion";
 import { BannerDataTypes } from "../app/page";
 
 const MainBanner = ({ banner }: { banner: BannerDataTypes }) => {
+  console.log("mainBanner");
   const imageProps = useNextSanityImage(client, banner.image);
 
   return (
@@ -34,12 +34,7 @@ const MainBanner = ({ banner }: { banner: BannerDataTypes }) => {
 
         {/* === MAIN IMAGE  */}
 
-        <motion.div
-          whileHover={{ scale: 1.1 }}
-          animate={{
-            rotate: [0, 0, -20, 20, 0],
-          }}
-          transition={{ duration: 0.4 }}
+        <div
           className="drop-shadow-2xl absolute w-48 sm:self-center
           lg:w-[340px] sm:w-60 self-end pt-10 sm:pt-0 lg:self-center"
         >
@@ -48,7 +43,7 @@ const MainBanner = ({ banner }: { banner: BannerDataTypes }) => {
             className=" absolute bottom-10 blur-md left-0 right-0 mx-auto
              bg-fullBlack blur-1xl h-4 opacity-20 rounded-full w-32"
           ></div>
-        </motion.div>
+        </div>
 
         <Link href={`/product/${banner.product}`}>
           <button

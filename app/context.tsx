@@ -24,7 +24,7 @@ export const Provider = ({ children }) => {
   };
 
   // ADD TO CART
-  const onAdd = (product, quantity: number) => {
+  const onAdd = (product: ProductsTypes, quantity: number) => {
     const checkProductInCart = cartItems.find(
       (item) => item._id === product._id
     );
@@ -86,7 +86,7 @@ export const Provider = ({ children }) => {
     }
     setcartItems(newCartItems);
   };
-
+  console.log("context");
   return (
     <UC.Provider
       value={{
