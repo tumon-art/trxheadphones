@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "concurrently \"next dev --turbo\" \"tailwindcss --input input.css --output output.css --watch\"",
+    "build": "tailwindcss input.css --output output.css && next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -14,7 +14,7 @@
     "@sanity/image-url": "^1.0.1",
     "@stripe/stripe-js": "^1.44.1",
     "canvas-confetti": "^1.6.0",
-    "next": "13.0.4",
+    "next": "^13.0.5",
     "next-sanity-image": "^3.2.1",
     "react": "18.2.0",
     "react-dom": "^18.2.0",

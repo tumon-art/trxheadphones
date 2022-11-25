@@ -61,7 +61,6 @@ const Navbar = () => {
           stroke="currentColor"
           strokeWidth={2}
         >
-          {" "}
           <title> Demo </title>
           <path
             strokeLinecap="round"
@@ -82,7 +81,6 @@ const Navbar = () => {
             stroke="currentColor"
             strokeWidth={2}
           >
-            {" "}
             <title> Show Cart Items</title>
             <path
               strokeLinecap="round"
