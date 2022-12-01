@@ -13,8 +13,9 @@ export interface ProductsTypes {
   model: string;
   name: string;
   price: number;
+  oldPrice: number;
   slug: { _type: string; current: string };
-  quantity: number
+  quantity: number;
 }
 
 export interface BannerDataTypes {
