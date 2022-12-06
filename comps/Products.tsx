@@ -62,13 +62,13 @@ const Products = ({ products, gap }: ProductsProps) => {
       <section className=" mx-1 sm:mx-2 flex mt-2 items-center justify-between">
         <nav className=" text-sm font-normal sm:font-medium">
           <p> {products.name} </p>
-          <span>
+          <div className=" flex gap-3">
             <span className=" text-sm text-lightGray line-through ">
               {" "}
               ${products.oldPrice}{" "}
             </span>
-            <b className=" text-red-600 line-through"> ${products.price} </b>
-          </span>
+            <b className=" text-zinc-900 "> ${products.price} </b>
+          </div>
         </nav>
 
         {/* === FAV ICON */}
