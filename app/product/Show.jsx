@@ -12,6 +12,27 @@ const Show = ({ product, products }) => {
   // USE STATES
   const [photoIndex, setphotoIndex] = useState(0);
 
+  const [zoom, setZoom] = useState(false);
+
+  const imgMouseOver = (e) => {
+    const img = document.getElementById("img");
+    console.log("clientX", e.clientX);
+    const x = e.clientX;
+    const y = e.clientY;
+
+    img.style.transformOrigin = ` ${x}px ${y}px`;
+    img.style.transform = "scale(2)";
+    setZoom(true);
+  };
+
+  const mouseLeave = () => {
+    const img = document.getElementById("img");
+    img.style.transform = "scale(1)";
+    img.style.transformOrigin = ` center`;
+
+    setZoom(false);
+  };
+
   return (
     <div className=" sm:px-10 py-10">
       <div>
@@ -20,9 +41,11 @@ const Show = ({ product, products }) => {
           <section className=" grid sm:block justify-center ">
             <img
               className=" object-cover
-              hover:bg-primary transition duration-300
+              hover:bg-primary transition duration-300 cursor-zoom-in
               h-64 w-64 lg:h-96 lg:w-96 bg-lightDim1 sm:rounded-2xl"
               src={urlFor(product.image && product.image[photoIndex])}
+              onMouseMove={(e) => imgMouseOver(e)}
+              onMouseLeave={mouseLeave}
             />
 
             {/* === MORE IMAGES */}
@@ -43,8 +66,23 @@ const Show = ({ product, products }) => {
 
           <section
             name="details"
-            className=" mt-10 sm:mt-0 text-primary sm:ml-10"
+            className=" relative mt-10 sm:mt-0 text-primary sm:ml-10"
           >
+            <div
+              className={` ${zoom ? "block" : "hidden"}
+             absolute left-0  rounded-xl  overflow-hidden`}
+            >
+              <img
+                id="img"
+                alt="img"
+                className=" object-cover
+              hover:bg-primary transition duration-300
+              h-64 w-64 lg:h-96 lg:w-96 bg-lightDim1 sm:rounded-2xl"
+                src={urlFor(product.image && product.image[photoIndex])}
+                onMouseOver={() => setphotoIndex(i)}
+              />
+            </div>
+
             <div className=" ml-2">
               {/* === PRODUCT DETAILS & REVIEWS */}
               <h1 className=" text-secondary text-xl font-semibold">

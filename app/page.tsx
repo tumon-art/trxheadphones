@@ -34,6 +34,7 @@ export interface BannerDataTypes {
   saleTime: string;
 }
 
+
 async function getData() {
   const query = '*[_type == "product"]';
   const products: ProductsTypes[] = await client.fetch(query);
@@ -43,13 +44,12 @@ async function getData() {
 
   return {
     products,
-    bannerData,
+    bannerData
   };
 }
 
 export default async function Page() {
   const { products, bannerData } = await getData();
-
   return (
     <>
       <Home products={products} bannerData={bannerData} />

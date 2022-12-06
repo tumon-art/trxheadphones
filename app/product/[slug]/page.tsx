@@ -1,5 +1,5 @@
 import { client } from "../../../lib/client";
-import Show from "../Show";
+import Show from "../Show.jsx";
 
 type PageProps = {
   params: {
