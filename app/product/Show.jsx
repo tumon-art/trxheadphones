@@ -69,8 +69,8 @@ const Show = ({ product, products }) => {
             className=" relative mt-10 sm:mt-0 text-primary sm:ml-10"
           >
             <div
-              className={` ${zoom ? "block" : "hidden"}
-             absolute left-0  rounded-xl  overflow-hidden`}
+              className={` ${zoom ? "md:block" : "hidden"}
+             absolute left-0  rounded-xl hidden  overflow-hidden`}
             >
               <img
                 id="img"
