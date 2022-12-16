@@ -3,7 +3,7 @@ import { useState } from "react";
 import { BannerDataTypes, ProductsTypes } from "../app/page";
 import FooterBanner from "../comps/FooterBanner";
 import MainBanner from "./MainBanner";
-import Products from "./Products";
+import Products from "../app/Products";
 
 interface HomeProps {
   products: ProductsTypes[];

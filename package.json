@@ -9,27 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@sanity/cli": "^2.35.0",
     "@sanity/client": "^3.4.1",
     "@sanity/image-url": "^1.0.1",
-    "@stripe/stripe-js": "^1.44.1",
+    "@stripe/stripe-js": "^1.46.0",
     "canvas-confetti": "^1.6.0",
-    "next": "^13.0.5",
+    "next": "^13.0.7",
     "next-sanity-image": "^5.0.0",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.0",
-    "stripe": "^11.1.0"
+    "stripe": "^11.4.0"
   },
   "devDependencies": {
-    "@types/node": "18.11.10",
-    "@types/react": "18.0.25",
+    "@types/node": "18.11.15",
+    "@types/react": "18.0.26",
     "autoprefixer": "^10.4.13",
-    "eslint": "8.28.0",
-    "eslint-config-next": "^13.0.5",
-    "postcss": "^8.4.19",
+    "eslint": "8.29.0",
+    "eslint-config-next": "^13.0.7",
+    "postcss": "^8.4.20",
     "tailwindcss": "^3.2.4",
-    "typescript": "4.9.3"
+    "typescript": "4.9.4"
   },
   "main": "index.js",
   "license": "MIT"
