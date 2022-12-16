@@ -66,8 +66,7 @@ const Products = ({ products, gap }: ProductsProps) => {
           <p> {products.name} </p>
           <div className=" flex gap-3">
             <span className=" text-sm text-lightGray line-through ">
-              {" "}
-              ${products.oldPrice}{" "}
+              ${products.oldPrice}
             </span>
             <b className=" text-zinc-900 "> ${products.price} </b>
           </div>
@@ -83,7 +82,7 @@ const Products = ({ products, gap }: ProductsProps) => {
                 setUpdate((p) => !p);
               }}
               className={`h-6 stroke-lightGray hover:stroke-love self-start 
-          sm:hover:fill-love transition-colors
+          sm:hover:fill-love transition-colors cursor-pointer
           duration-1000 text-lightDim1 z-10 ${
             window.localStorage.trxfav &&
             JSON.parse(localStorage.trxfav).filter(
@@ -112,7 +111,9 @@ const Products = ({ products, gap }: ProductsProps) => {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-6 h-6 text-lightGray"
+            className="w-6 h-6 cursor-pointer hidden sm:block text-lightGray
+            hover:stroke-dim
+            "
           >
             <path
               strokeLinecap="round"
