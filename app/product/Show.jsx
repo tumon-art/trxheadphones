@@ -16,7 +16,6 @@ const Show = ({ product, products }) => {
 
   const imgMouseOver = (e) => {
     const img = document.getElementById("img");
-    console.log("clientX", e.clientX);
     const x = e.clientX;
     const y = e.clientY;
 
@@ -68,6 +67,7 @@ const Show = ({ product, products }) => {
             name="details"
             className=" relative mt-10 sm:mt-0 text-primary sm:ml-10"
           >
+            {/* === ZOOM IMAGE */}
             <div
               className={` ${zoom ? "md:block" : "hidden"}
              absolute left-0  rounded-xl hidden  overflow-hidden`}
