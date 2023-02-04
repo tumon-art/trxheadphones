@@ -3,7 +3,8 @@ import { client } from "../lib/client";
 import Img from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
 import { ProductsTypes } from "./page";
-import { memo, useEffect, useState } from "react";
+import { memo, useContext, useEffect, useState } from "react";
+import { UC } from "./context";
 
 interface ProductsProps {
   products: ProductsTypes;
@@ -12,6 +13,7 @@ interface ProductsProps {
 
 const Products = ({ products, gap }: ProductsProps) => {
   const [isLoaded, setIsloaded] = useState<boolean>(false);
+  const { onAdd, cartItems } = useContext(UC);
 
   //  UPDATE THE COMP TO SHOW FAV
   const [update, setUpdate] = useState<boolean>(false);
@@ -109,11 +111,13 @@ const Products = ({ products, gap }: ProductsProps) => {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            strokeWidth={1.5}
             stroke="currentColor"
-            className="w-6 h-6 cursor-pointer hidden sm:block text-lightGray
-            hover:stroke-dim
-            "
+            className={`w-6 h-6 cursor-pointer hidden sm:block text-lightGray
+            hover:stroke-dim stroke-[1.5] ${
+              cartItems.filter((item: any) => item._id == products._id)
+                .length >= 1 && "text-dim stroke-[2]"
+            }`}
+            onClick={() => onAdd(products, 1)}
           >
             <path
               strokeLinecap="round"
