@@ -3,7 +3,8 @@ import Link from "next/link";
 import { useContext } from "react";
 import Cart from "../comps/Cart";
 import { UC } from "../app/context";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 
 const Navbar = () => {
   const { showCart, setshowCart, totalQuantities } = useContext(UC);

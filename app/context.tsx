@@ -1,6 +1,7 @@
 "use client";
 import React, { createContext, useState } from "react";
-import { toast, Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 import { ProductsTypes } from "./page";
 
 export const UC = createContext<any>(null);

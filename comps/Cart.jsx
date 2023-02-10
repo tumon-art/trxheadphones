@@ -2,7 +2,6 @@
 import React, { useContext, useRef } from "react";
 
 import toast from "react-hot-toast";
-
 import getStripe from "../lib/getStripe";
 import { urlFor } from "../lib/client";
 import { UC } from "../app/context";
