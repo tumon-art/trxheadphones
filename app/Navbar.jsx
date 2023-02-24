@@ -15,20 +15,24 @@ const Navbar = () => {
     <div className=" mt-1 px-1 sm:my-1  md:mx-4 flex justify-between">
       <h3 className=" self-end">
         <Link href="/">
-          <div className=" flex items-end font-mono text-lightGray font-bold ">
-            TRX Headphones
+          <div className=" flex text-xl items-center gap-2 justify-center font-mono text-lightGray font-bold ">
+            TRX
             <svg
-              className=" h-6 ml-1 w-auto"
-              viewBox="0 0 24 26"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              fill="none"
+              fill="currentColor"
+              className="h-6 w-6"
+              version="1.1"
+              id="Capa_1"
+              viewBox="0 0 512 512"
             >
-              <path
-                d="M3 17c3.333 -3.333 5 -6 5 -8c0 -3 -1 -3 -2 -3s-2.032 1.085 
-              -2 3c.034 2.048 1.658 4.877 2.5 6c1.5 2 2.5 2.5 3.5 1l2 -3c.333 2.667
-              1.333 4 3 4c.53 0 2.639 -2 3 -2c.517 0 1.517 .667 3 2"
-              />
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M461.77,136.212c2.028-14.416-2.312-29.563-13.405-40.648c-106.082-106.063-278.674-106.063-384.756,0 c-11.093,11.086-15.412,26.232-13.384,40.648C18.796,178.724,0,231.087,0,287.892v112c0,17.672,14.265,32.092,31.942,32.092H64 v31.908c0,17.672,14.282,32.092,31.958,32.092h48.013c17.676,0,32.029-14.42,32.029-32.092v-128 c0-17.674-14.353-31.908-32.029-31.908H95.958C78.282,303.983,64,318.218,64,335.892v-48c0-41.168,13.123-79.258,35.273-110.551 c11.722-0.41,23.314-4.957,32.258-13.902c68.643-68.609,180.314-68.609,248.957,0c8.944,8.945,20.52,13.492,32.242,13.902 C434.88,208.634,448,246.724,448,287.892v48c0-17.674-14.282-31.908-31.958-31.908h-48.013c-17.676,0-32.029,14.234-32.029,31.908 v128c0,17.672,14.353,32.092,32.029,32.092h48.013c17.676,0,31.958-14.42,31.958-32.092v-31.908h32.058 c17.676,0,31.942-14.42,31.942-32.092v-112C512,231.087,493.2,178.724,461.77,136.212z"></path>{" "}
+              </g>
             </svg>
           </div>
         </Link>
@@ -48,7 +52,7 @@ const Navbar = () => {
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
-            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 
+            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5
           4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
           />
         </svg>

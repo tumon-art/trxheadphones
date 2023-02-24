@@ -27,7 +27,7 @@ const Home = ({ products, bannerData }: HomeProps) => {
     );
 
   // SELECT HANDLE
-  const selectHandle = (e) => {
+  const selectHandle = (e:any) => {
     const value = e.target.value;
 
     // SET STATES
@@ -42,7 +42,7 @@ const Home = ({ products, bannerData }: HomeProps) => {
   return (
     <main>
       {/* === MAIN BANNER  */}
-      <MainBanner banner={bannerData.length && bannerData[0]} />
+      <MainBanner banner={bannerData[0]} />
 
       <div className="flex justify-between md:mx-20">
         <div> </div>
