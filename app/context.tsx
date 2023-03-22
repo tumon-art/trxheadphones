@@ -8,7 +8,7 @@ export const UC = createContext<any>(null);
 
 export const Provider = ({ children }) => {
   const [showCart, setshowCart] = useState<boolean>(false);
-  const [cartItems, setcartItems] = useState([]);
+  const [cartItems, setcartItems] = useState<ProductsTypes[] | any>([]);
   const [totalPrice, settotalPrice] = useState<number>(0);
   const [totalQuantities, settotalQuantities] = useState<number>(0);
   const [qty, setqty] = useState<number>(1);
