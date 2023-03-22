@@ -15,7 +15,7 @@ const Success = () => {
     settotalPrice(0);
     settotalQuantities(0);
     runFireworks();
-  }, []);
+  }, [setcartItems, settotalPrice, settotalQuantities]);
 
   return (
     <div className=" my-10 flex justify-center items-center">
