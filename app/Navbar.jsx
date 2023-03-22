@@ -12,7 +12,7 @@ const Navbar = () => {
   const notify = () => toast.error("Not Ready Yet!");
 
   return (
-    <div className=" mt-1 px-1 sm:my-1  md:mx-4 flex justify-between">
+    <div className="md:mx-20 mt-1 px-1 sm:my-1 flex justify-between">
       <h3 className=" self-end">
         <Link href="/">
           <div className=" flex text-xl items-center gap-2 justify-center font-mono text-lightGray font-bold ">
