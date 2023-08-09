@@ -15,10 +15,10 @@ const Navbar = () => {
     <div className="md:mx-20 mt-1 px-1 sm:my-1 flex justify-between">
       <h3 className=" self-end">
         <Link href="/">
-          <div className=" flex text-xl items-center gap-2 justify-center font-mono text-lightGray font-bold ">
+          <div className=" logoText flex  items-center gap-2 justify-center font-sans font-extrabold ">
             TRX
             <svg
-              fill="currentColor"
+              fill="white"
               className="h-6 w-6"
               version="1.1"
               id="Capa_1"
@@ -38,7 +38,7 @@ const Navbar = () => {
         </Link>
       </h3>
 
-      <div className="flex gap-4">
+      <div className="flex gap-4 items-center">
         <svg
           onClick={notify}
           className="h-6 w-6 text-lightGray

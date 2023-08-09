@@ -27,7 +27,7 @@ const Home = ({ products, bannerData }: HomeProps) => {
     );
 
   // SELECT HANDLE
-  const selectHandle = (e:any) => {
+  const selectHandle = (e: any) => {
     const value = e.target.value;
 
     // SET STATES
@@ -61,11 +61,13 @@ const Home = ({ products, bannerData }: HomeProps) => {
       </div>
 
       <section className="  mb-4 flex items-center flex-col">
-        <h1 className=" sm:text-4xl text-2xl text-secondary font-sans font-extrabold">
+        <h1
+          className=" headTitle px-8 py-4 sm:py-2 sm:text-4xl text-2xl text-secondary
+         font-sans font-extrabold sm:rounded-t-3xl"
+        >
           Best Selling Headphones
         </h1>
-
-        <p className=" text-base text-secondary">Best in the Market</p>
+        {/* <p className=" text-base text-secondary">Best in the Market</p> */}
       </section>
 
       {/* === SHOW PRODUCTS  */}
