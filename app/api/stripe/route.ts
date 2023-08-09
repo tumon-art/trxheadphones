@@ -10,10 +10,11 @@ const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY!, {
   },
 });
 
-console.log("api/stripe");
 export async function POST(req: Request) {
   try {
     const reqBody = await req.json();
+    const urlOrigin = req.headers.get("origin");
+    const a = JSON.stringify(reqBody);
     // Create Checkout Sessions from body params.
     const session = await stripe.checkout.sessions.create({
       submit_type: "pay",
@@ -21,7 +22,7 @@ export async function POST(req: Request) {
       payment_method_types: ["card"],
       billing_address_collection: "auto",
       shipping_options: [{ shipping_rate: "shr_1L4XgjA0wDuDFD5eJqmVTIZj" }],
-      line_items: reqBody((item) => {
+      line_items: reqBody.map((item) => {
         const img = item.image[0].asset._ref;
         const newImage = img
           .replace(
@@ -46,10 +47,8 @@ export async function POST(req: Request) {
           quantity: item.quantity,
         };
       }),
-      // success_url: `${req.headers.origin}/success`,
-      // cancel_url: `${req.headers.origin}/canceled`,
-      success_url: `http://localhost:3000/success`,
-      cancel_url: `http://localhost:3000/canceled`,
+      success_url: `${urlOrigin}/success`,
+      cancel_url: `${urlOrigin}/canceled`,
     });
 
     return NextResponse.json(session);
