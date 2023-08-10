@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <div className=" mt-20 mx-4 text-center flex flex-col items-center">
       <p className=" font-semibold text-zinc-900 text-sm">
-        © 2022 TRX Headphones All rights reserverd
+        © 2023 TRX Headphones All rights reserverd
       </p>
       <nav className=" flex mt-2 mb-2">
         {/* === INSTAGRAM LOGO */}
