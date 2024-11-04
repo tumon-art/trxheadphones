@@ -8,7 +8,6 @@ import { UC } from "../app/context";
 import { ArrowLeft, Delete, Minus, Plus, ShoppingBag } from "./Svg";
 
 const Cart = () => {
-  console.log("cart");
   // USE REF
   const cartRef = useRef();
 
